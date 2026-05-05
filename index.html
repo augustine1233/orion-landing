@@ -7,7 +7,7 @@
 <title>Primera Consulta Dental $40,000 COP | Orión Odontología Armenia</title>
 <meta name="description" content="Evaluación dental completa con radiografía panorámica, reporte personalizado y regalo de bienvenida. Solo $40,000 COP. Cupos limitados. Armenia, Quindío, Colombia.">
 <meta property="og:title" content="Primera Consulta Dental — $40,000 COP">
-<meta property="og:description" content="Radiografía + Evaluación + Reporte + Regalo de bienvenida. Solo para nuevos pacientes en Armenia, Quindío. Cupos muy limitados.">
+<meta property="og:description" content="Radiografía + Evaluación + Reporte + Regalo de bienvenida. Cupos muy limitados. Armenia, Quindío.">
 <meta property="og:url" content="https://evaluacionorion.org">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
@@ -44,7 +44,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-h1,h2,h3,h4 { font-family: 'Poppins', system-ui, sans-serif; margin: 0; line-height: 1.25; }
+h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; margin: 0; line-height: 1.25; }
 p { margin: 0 0 12px; }
 a { color: inherit; text-decoration: none; }
 img, video { display: block; max-width: 100%; }
@@ -53,158 +53,62 @@ button { font-family: inherit; cursor: pointer; border: 0; }
 /* HEADER */
 header {
   position: fixed; top: 0; left: 0; right: 0;
-  height: 64px; background: #FFFFFF;
+  height: 60px; background: #FFFFFF;
   z-index: 999;
-  display: flex; align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   transition: box-shadow 0.2s ease;
 }
-.logo-img {
-  display: block; height: 40px; width: auto;
+.logo-mark {
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  color: #fff; font-size: 18px; line-height: 1;
 }
+.logo-sub {
+  font-size: 10px; color: rgba(255,255,255,0.7);
+  margin-top: 2px; line-height: 1;
+}
+.logo-img { display: block; height: 40px; width: auto; }
 .logo-img-footer {
   display: block; height: 48px; width: auto;
   background: #fff; padding: 8px 12px; border-radius: 10px;
 }
-@media (max-width: 600px) {
-  .logo-img { height: 32px; }
-  .logo-img-footer { height: 42px; }
-}
 .header-phone {
   font-family: 'Open Sans', sans-serif; font-weight: 600;
-  color: #1A1A1A; font-size: 14px;
+  color: #1A1A1A; font-size: 13px;
   display: inline-flex; align-items: center; gap: 6px;
 }
 .header-phone:hover { color: #2FAFB2; }
 @media (max-width: 600px) {
-  header { height: 56px; padding: 0 16px; }
-  .header-phone { font-size: 13px; }
+  header { height: 52px; padding: 0 16px; }
+  .logo-mark { font-size: 17px; }
+  .logo-sub { font-size: 10px; }
+  .logo-img { height: 32px; }
+  .logo-img-footer { height: 42px; }
 }
 
 /* HERO */
 .hero {
-  position: relative;
   background-color: #2FAFB2;
-  background-image: url('assets/orion-clinic.jpeg');
+  background-image:
+    linear-gradient(rgba(47,175,178,0.88), rgba(47,175,178,0.88)),
+    url('assets/orion-clinic.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 96px 20px 64px;
+  background-attachment: fixed;
+  padding: 80px 20px 56px;
   min-height: 100vh;
   display: flex; align-items: center;
-  overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: rgba(47,175,178,0.88);
-  z-index: 0;
+  text-align: center;
 }
 .hero-inner {
-  position: relative; z-index: 1;
-  max-width: 720px; margin: 0 auto; width: 100%;
+  width: 100%; max-width: 720px; margin: 0 auto;
   display: flex; flex-direction: column; align-items: center;
-  text-align: center;
-  gap: 0;
 }
-@media (max-width: 900px) {
-  .hero { min-height: auto; padding: 80px 20px 48px; }
-}
-.scarcity-badge {
-  display: inline-block;
-  background: #DA4237;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600; font-size: 13px;
-  padding: 8px 18px; border-radius: 999px;
-  margin-bottom: 24px;
-  animation: pulse 2.4s ease-in-out infinite;
-  cursor: pointer;
-  text-decoration: none;
-  border: 0;
-  box-shadow: 0 4px 14px rgba(218,66,55,0.35);
-  transition: filter 0.2s ease;
-}
-.scarcity-badge:hover { filter: brightness(1.08); }
-.hero-headline {
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 52px; color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
-  margin-bottom: 12px;
-  text-align: center;
-}
-.hero-sub {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 22px; color: rgba(255,255,255,0.95);
-  margin-bottom: 20px;
-  text-align: center;
-}
-.hero-body {
-  font-size: 16px; color: rgba(255,255,255,0.9);
-  max-width: 540px; line-height: 1.7;
-  margin: 0 auto 24px;
-  text-align: center;
-}
-.hero-price {
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 46px; color: #ECA340; line-height: 1;
-  -webkit-text-stroke: 2px #1A1A1A;
-  text-shadow:
-    -1px -1px 0 #1A1A1A,
-     1px -1px 0 #1A1A1A,
-    -1px  1px 0 #1A1A1A,
-     1px  1px 0 #1A1A1A,
-     0 4px 14px rgba(0,0,0,0.25);
-  paint-order: stroke fill;
-}
-.hero-price-sub {
-  font-size: 13px; color: rgba(255,255,255,0.75);
-  margin-top: 6px; margin-bottom: 24px;
-}
-.countdown {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(0,0,0,0.3);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 999px; padding: 10px 22px;
-  margin-bottom: 24px;
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 14px; color: #fff;
-}
-.countdown-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: #DA4237;
-  animation: pulse 1.6s ease-in-out infinite;
-}
-.cta-primary {
-  display: inline-block;
-  background: #ECA340; color: #1A1A1A;
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 18px;
-  padding: 18px 40px; border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(236,163,64,0.4);
-  transition: transform 0.2s ease, filter 0.2s ease;
-  text-align: center;
-}
-.cta-primary:hover { transform: scale(1.02); filter: brightness(1.05); }
-.hero-trust {
-  margin-top: 18px;
-  font-size: 13px; color: rgba(255,255,255,0.95);
-  line-height: 1.9;
-}
-@media (max-width: 600px) {
-  .hero-headline { font-size: 34px; }
-  .hero-sub { font-size: 17px; }
-  .hero-price { font-size: 38px; }
-  .cta-primary { display: block; width: 100%; padding: 18px 24px; font-size: 16px; }
-}
-
 .hero-media {
-  width: 100%; max-width: 520px;
-  margin: 0 auto 16px;
+  width: 100%; max-width: 560px;
+  margin-bottom: 18px;
 }
 .hero-media video,
 .hero-media .media-placeholder {
@@ -221,42 +125,233 @@ header {
   color: #fff;
 }
 .media-placeholder .ph-icon { font-size: 40px; margin-bottom: 12px; }
-.media-placeholder .ph-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 16px; margin-bottom: 8px; }
-.media-placeholder .ph-file { font-size: 12px; opacity: 0.85; font-family: monospace; }
+.media-placeholder .ph-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+.media-placeholder .ph-file { font-size: 11px; opacity: 0.85; font-family: monospace; }
 .media-caption {
-  font-style: italic; color: rgba(255,255,255,0.85);
-  font-size: 13px; text-align: center;
-  margin: 0 0 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic; color: rgba(255,255,255,0.7);
+  font-size: 12px; margin-bottom: 22px;
 }
-
-/* TRUST BAR */
-.trust-bar {
-  background: #fff; padding: 60px 20px;
+.scarcity-badge {
+  display: inline-block;
+  background: #DA4237; color: #fff;
+  font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 13px;
+  padding: 8px 20px; border-radius: 999px;
+  margin-bottom: 22px;
+  cursor: pointer; text-decoration: none;
+  box-shadow: 0 4px 14px rgba(218,66,55,0.35);
+  animation: pulse 1.5s ease-in-out infinite;
 }
-.trust-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-.trust-stat { text-align: center; padding: 0 16px; position: relative; }
-.trust-stat:not(:last-child)::after {
-  content: ""; position: absolute; right: 0; top: 12px; bottom: 12px;
-  width: 1px; background: rgba(47,175,178,0.25);
-}
-.trust-value {
+.scarcity-badge:hover { filter: brightness(1.08); }
+.hero-headline {
   font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 32px; color: #2FAFB2; line-height: 1.1;
+  font-size: 56px; color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  line-height: 1.15; max-width: 640px; margin: 0 auto 12px;
 }
-.trust-label {
-  font-size: 13px; color: #666; margin-top: 8px;
+.hero-sub {
+  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-size: 22px; color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
 }
-@media (max-width: 700px) {
-  .trust-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-stat:nth-child(2)::after { display: none; }
-  .trust-stat:not(:last-child)::after { display: none; }
+.hero-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px; color: rgba(255,255,255,0.85);
+  line-height: 1.7; max-width: 520px; margin: 0 auto 24px;
+}
+.hero-price {
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 48px; color: #ECA340; line-height: 1;
+}
+.hero-price-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: rgba(255,255,255,0.7);
+  margin-top: 6px; margin-bottom: 24px;
+}
+.countdown {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,0,0,0.3);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 999px; padding: 10px 22px;
+  margin-bottom: 24px;
+  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-size: 13px; color: #fff;
+}
+.countdown-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #DA4237;
+  animation: dotPulse 1.6s ease-in-out infinite;
+}
+.cta-primary {
+  display: inline-block;
+  background: #ECA340; color: #1A1A1A;
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 17px;
+  padding: 18px 40px; border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(236,163,64,0.4);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.cta-primary:hover { transform: scale(1.02); filter: brightness(1.05); }
+.hero-trust {
+  margin-top: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: rgba(255,255,255,0.95);
+  line-height: 1.9;
+}
+@media (max-width: 600px) {
+  .hero { padding: 70px 20px 40px; min-height: auto; }
+  .hero-headline { font-size: 36px; }
+  .hero-sub { font-size: 17px; }
+  .hero-price { font-size: 40px; }
+  .cta-primary { display: block; width: 100%; padding: 18px 24px; font-size: 16px; }
 }
 
-/* SECTION COMMON */
+/* DIVIDERS / BANDS */
+.section-divider { width: 100%; height: 8px; background: #1A1A1A; display: block; }
+.section-band {
+  width: 100%; background: #2FAFB2;
+  padding: 28px 20px; text-align: center;
+  box-sizing: border-box;
+}
+.section-band-emoji { font-size: 32px; display: block; margin-bottom: 8px; line-height: 1; }
+.section-band-title {
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 22px; color: #fff;
+  margin-bottom: 4px;
+}
+.section-band-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; color: rgba(255,255,255,0.85);
+  max-width: 600px; margin: 0 auto;
+}
+
+/* SURVEY */
+#survey-section { background: #fff; }
+.survey-section-body { padding: 16px 0 56px; }
+.q-label {
+  font-family: 'Open Sans', sans-serif; font-weight: 600;
+  font-size: 12px; color: #2FAFB2;
+  letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.q-text {
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 24px; color: #1A1A1A;
+  margin-bottom: 28px; line-height: 1.3;
+}
+@media (max-width: 600px) {
+  .q-text { font-size: 20px; }
+}
+.q-options { display: flex; flex-direction: column; gap: 12px; }
+
+/* CONTACT FORM */
+#contact-section { background: #F8F8F8; display: none; }
+#form-recap {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  padding: 16px 20px;
+  background: #fff;
+  border-bottom: 1px solid #F0F0F0;
+}
+.form-wrap {
+  max-width: 560px; margin: 0 auto;
+  padding: 32px 20px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.form-field { display: flex; flex-direction: column; }
+.form-label {
+  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-size: 13px; color: #1A1A1A;
+  margin-bottom: 6px; display: block;
+}
+.form-input, .form-select {
+  width: 100%;
+  padding: 16px 18px;
+  border: 2px solid #E5E5E5;
+  border-radius: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; color: #1A1A1A;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none; appearance: none;
+}
+.form-input:focus, .form-select:focus { border-color: #2FAFB2; }
+.phone-row { display: flex; gap: 8px; }
+.phone-row .form-select {
+  min-width: 110px; padding-right: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+.phone-row .form-input { flex: 1; min-width: 0; }
+.form-error {
+  display: none;
+  background: rgba(218,66,55,0.08);
+  border: 1px solid #DA4237;
+  color: #DA4237;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; text-align: center;
+}
+.form-privacy {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px; color: #999;
+  text-align: center; margin: 0;
+}
+.form-submit {
+  width: 100%;
+  background: #ECA340; color: #1A1A1A;
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 17px;
+  border: 0; border-radius: 14px; padding: 18px;
+  box-shadow: 0 4px 20px rgba(236,163,64,0.4);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.form-submit:hover:not(:disabled) { transform: scale(1.02); filter: brightness(1.05); }
+.form-submit:disabled { cursor: wait; }
+.form-trust {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 16px; margin-top: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px; color: #888;
+}
+
+/* CALENDAR */
+#calendar-section { background: #fff; display: none; }
+#webhook-loading { text-align: center; padding: 40px 20px; }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid #E5E5E5;
+  border-top-color: #2FAFB2;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 0.8s linear infinite;
+}
+.spinner-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: #888;
+  margin-top: 12px;
+}
+#calendar-wrap {
+  max-width: 800px; margin: 0 auto;
+  padding: 0 20px 40px;
+}
+#calendar-wrap iframe {
+  width: 100%; border: none; overflow: hidden;
+  min-height: 700px; border-radius: 14px;
+  background: #fff;
+}
+.calendar-trust {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 16px; margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: #5A8A00; font-weight: 600;
+}
+
+/* COMMON SECTION */
 .section { padding: 80px 20px; }
 .section-inner { max-width: 1100px; margin: 0 auto; }
 .section-label {
@@ -266,12 +361,13 @@ header {
   letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 14px;
 }
-.section-divider {
+.section-divider-line {
   width: 40px; height: 3px; background: #2FAFB2;
   margin: 0 auto 24px; border-radius: 2px;
 }
 .section-headline {
-  font-weight: 700; font-size: 34px; color: #1A1A1A;
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 34px; color: #1A1A1A;
   text-align: center; max-width: 700px;
   margin: 0 auto 40px; line-height: 1.3;
 }
@@ -280,68 +376,49 @@ header {
   .section-headline { font-size: 26px; }
 }
 
-/* PROBLEM SECTION */
-.problem-section { background: #fff; }
-.pain-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 24px; max-width: 1100px; margin: 0 auto;
-}
-.pain-card {
-  background: #fff; border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  padding: 28px;
-  border-left: 4px solid #DA4237;
-}
-.pain-icon { font-size: 32px; margin-bottom: 14px; }
-.pain-title {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 16px; margin-bottom: 10px; color: #1A1A1A;
-}
-.pain-body { font-size: 14px; color: #555; line-height: 1.6; }
-@media (max-width: 800px) {
-  .pain-grid { grid-template-columns: 1fr; }
-}
-
-/* OFFER SECTION */
-.offer-section { background: #F8F8F8; }
+/* VALUE STACK */
+.value-section { background: #F8F8F8; }
 .offer-card {
   background: #fff; border-radius: 24px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-  max-width: 580px; margin: 0 auto; padding: 40px;
+  max-width: 560px; margin: 0 auto; padding: 40px;
 }
 .offer-item {
-  display: flex; justify-content: space-between;
-  align-items: center; gap: 12px;
-  padding: 14px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; padding: 14px 0;
+  border-bottom: 1px solid #F8F8F8;
 }
-.offer-item:not(:last-of-type) { border-bottom: 1px solid #F0F0F0; }
+.offer-item:last-of-type { border-bottom: 0; }
 .offer-item-name {
   display: flex; align-items: center; gap: 12px;
   font-family: 'Poppins', sans-serif; font-weight: 600;
   font-size: 15px; color: #1A1A1A;
 }
 .offer-check {
-  width: 22px; height: 22px; border-radius: 50%;
+  width: 24px; height: 24px; border-radius: 50%;
   background: #A3C854; color: #fff;
   display: inline-flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700;
+  font-size: 13px; font-weight: 700;
   flex-shrink: 0;
 }
-.offer-strike { color: #999; text-decoration: line-through; font-size: 14px; }
+.offer-strike {
+  font-family: 'Open Sans', sans-serif;
+  color: #999; text-decoration: line-through; font-size: 13px;
+}
 .offer-total-row {
-  display: flex; justify-content: space-between;
-  align-items: center;
-  padding: 16px 0 8px; border-top: 1px solid #F0F0F0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 0 8px;
+  border-top: 1px solid #F0F0F0;
   margin-top: 8px;
 }
 .offer-total-label { color: #666; font-size: 14px; }
 .offer-total-value {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   color: #999; text-decoration: line-through; font-size: 16px;
 }
 .offer-highlight {
   background: #ECA340; border-radius: 12px;
-  padding: 16px 20px; margin-top: 12px;
+  padding: 16px 20px; margin-top: 8px;
   display: flex; justify-content: space-between; align-items: center;
 }
 .offer-highlight-label {
@@ -352,22 +429,8 @@ header {
   font-family: 'Poppins', sans-serif; font-weight: 700;
   font-size: 26px; color: #1A1A1A;
 }
-.offer-foot { text-align: center; color: #666; font-size: 13px; margin: 20px auto 28px; }
-.offer-cta-wrap { text-align: center; }
-.cta-teal {
-  display: inline-block;
-  background: #2FAFB2; color: #fff;
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 18px;
-  padding: 18px 40px; border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(47,175,178,0.35);
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-.cta-teal:hover { transform: scale(1.02); filter: brightness(1.05); }
-@media (max-width: 600px) {
-  .offer-card { padding: 28px 20px; }
-  .cta-teal { display: block; width: 100%; padding: 18px 24px; font-size: 16px; }
-}
+.offer-foot { text-align: center; color: #666; font-size: 13px; margin: 16px auto 0; }
+@media (max-width: 600px) { .offer-card { padding: 28px 20px; } }
 
 /* TESTIMONIAL */
 .testimonial-section { background: #fff; }
@@ -387,13 +450,13 @@ header {
   pointer-events: none;
 }
 .testimonial-text {
+  font-family: 'Open Sans', sans-serif;
   font-size: 17px; color: #1A1A1A;
   font-style: italic; line-height: 1.8;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .patient-row {
-  display: flex; align-items: center; gap: 16px;
-  flex-wrap: wrap;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
 }
 .avatar {
   width: 48px; height: 48px; border-radius: 50%;
@@ -410,9 +473,7 @@ header {
 .stars { color: #ECA340; letter-spacing: 1px; font-size: 14px; }
 .verified-link { color: #2FAFB2; font-size: 12px; font-weight: 600; }
 .verified-link:hover { text-decoration: underline; }
-@media (max-width: 600px) {
-  .testimonial-card { padding: 28px 22px; }
-}
+@media (max-width: 600px) { .testimonial-card { padding: 28px 22px; } }
 
 /* GOOGLE REVIEWS */
 .reviews-section { background: #F8F8F8; }
@@ -433,15 +494,10 @@ header {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   color: inherit;
 }
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-}
-.review-head {
-  display: flex; align-items: center; gap: 12px;
-  margin-bottom: 14px;
-}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+.review-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .review-quote {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px; color: #444; font-style: italic;
   line-height: 1.8; margin: 12px 0 18px;
 }
@@ -453,7 +509,7 @@ header {
   display: flex; align-items: center; justify-content: center;
   gap: 16px; flex-wrap: wrap;
   background: #fff; border-radius: 16px;
-  padding: 20px 32px; max-width: 480px;
+  padding: 20px 32px; max-width: 380px;
   margin: 40px auto 0;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
@@ -461,9 +517,7 @@ header {
   font-family: 'Poppins', sans-serif; font-weight: 700;
   font-size: 40px; color: #ECA340; line-height: 1;
 }
-.google-summary-text {
-  font-size: 12px; color: #666;
-}
+.google-summary-text { font-size: 12px; color: #666; }
 .btn-pill-outline {
   display: inline-block;
   background: #fff; color: #2FAFB2;
@@ -479,209 +533,7 @@ header {
   margin-top: 16px; max-width: 600px;
   margin-left: auto; margin-right: auto;
 }
-@media (max-width: 800px) {
-  .reviews-grid { grid-template-columns: 1fr; }
-}
-
-/* INTENT SECTION */
-.intent-section { background: #F8F8F8; padding: 80px 20px; }
-.intent-inner { max-width: 760px; margin: 0 auto; }
-.progress-wrap {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 8px;
-  font-family: 'Open Sans', sans-serif; font-size: 13px;
-}
-.progress-label { color: #666; font-weight: 600; }
-.progress-pct { color: #2FAFB2; font-weight: 700; }
-.progress-bar {
-  background: #E5E5E5; height: 4px; border-radius: 99px;
-  overflow: hidden;
-  margin-bottom: 32px;
-}
-.progress-fill {
-  background: #2FAFB2; height: 100%; width: 33%;
-  border-radius: 99px;
-  transition: width 0.4s ease;
-}
-.intent-step { animation: fadeIn 0.4s ease; }
-.intent-step-headline {
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 28px; text-align: center; color: #1A1A1A;
-  margin-bottom: 8px;
-}
-.intent-step-sub {
-  text-align: center; color: #666; font-size: 16px;
-  margin-bottom: 32px;
-}
-.recap-pills {
-  display: flex; justify-content: center; gap: 8px;
-  flex-wrap: wrap; margin-bottom: 20px;
-}
-.pill {
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif; font-weight: 600;
-  font-size: 13px;
-  padding: 6px 14px; border-radius: 999px;
-}
-.pill-teal { background: rgba(47,175,178,0.12); color: #2FAFB2; }
-.pill-orange { background: rgba(236,163,64,0.18); color: #B57215; }
-.pill-lime { background: rgba(163,200,84,0.22); color: #5A7D24; }
-.intent-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-.intent-card {
-  position: relative;
-  background: #fff; border-radius: 16px;
-  border: 2px solid #E5E5E5;
-  padding: 24px; cursor: pointer;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-.intent-card:hover {
-  border-color: #2FAFB2;
-  background: rgba(47,175,178,0.04);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(47,175,178,0.15);
-}
-.intent-card.selected {
-  border-color: #2FAFB2;
-  background: rgba(47,175,178,0.08);
-}
-.intent-card-emoji { font-size: 32px; margin-bottom: 10px; }
-.intent-card-label {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 15px; color: #1A1A1A;
-}
-.intent-card-full {
-  grid-column: 1 / -1;
-  display: flex; align-items: center; justify-content: center;
-  gap: 12px; padding: 18px 24px;
-}
-.intent-card-full .intent-card-emoji { font-size: 28px; margin: 0; }
-.checkmark-badge {
-  position: absolute; top: 10px; right: 10px;
-  width: 22px; height: 22px; border-radius: 50%;
-  background: #2FAFB2; color: #fff;
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 12px;
-  display: none;
-  align-items: center; justify-content: center;
-}
-.intent-card.selected .checkmark-badge { display: inline-flex; }
-@media (max-width: 600px) {
-  .intent-grid { grid-template-columns: 1fr; }
-}
-
-.stack-list { display: flex; flex-direction: column; gap: 14px; }
-.stack-card {
-  position: relative;
-  display: flex; align-items: center; gap: 16px;
-  background: #fff; border: 2px solid #E5E5E5;
-  border-radius: 14px; padding: 18px 24px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.stack-card:hover {
-  border-color: #2FAFB2;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(47,175,178,0.12);
-}
-.stack-card.selected {
-  border-color: #2FAFB2;
-  background: rgba(47,175,178,0.06);
-}
-.stack-emoji { font-size: 26px; flex-shrink: 0; }
-.stack-text { flex: 1; }
-.stack-title {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 15px; color: #1A1A1A;
-}
-.stack-sub { font-size: 13px; color: #666; margin-top: 2px; }
-.stack-card .checkmark-badge { top: 50%; transform: translateY(-50%); right: 16px; }
-
-/* FORM */
-.form-wrap { display: flex; flex-direction: column; gap: 16px; max-width: 500px; margin: 0 auto; }
-.form-field { display: flex; flex-direction: column; }
-.form-label {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 13px; color: #1A1A1A; margin-bottom: 6px;
-}
-.form-input, .form-select {
-  padding: 14px 18px;
-  border: 2px solid #E5E5E5;
-  border-radius: 12px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  background: #fff;
-  color: #1A1A1A;
-  transition: border-color 0.2s ease;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.form-input:focus, .form-select:focus {
-  outline: none; border-color: #2FAFB2;
-}
-.phone-row { display: flex; gap: 8px; }
-.phone-row .form-select { min-width: 110px; padding-right: 32px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
-.phone-row .form-input { flex: 1; min-width: 0; }
-.form-error {
-  display: none;
-  background: rgba(218,66,55,0.08);
-  border: 1px solid #DA4237;
-  color: #DA4237;
-  border-radius: 10px;
-  padding: 12px 14px;
-  font-size: 14px;
-}
-.form-privacy {
-  text-align: center; font-size: 12px; color: #999;
-  margin-top: 4px;
-}
-.form-submit {
-  background: #ECA340; color: #1A1A1A;
-  font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 17px;
-  padding: 18px;
-  border-radius: 14px;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(236,163,64,0.35);
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-.form-submit:hover:not(:disabled) {
-  transform: scale(1.02); filter: brightness(1.05);
-}
-.form-submit:disabled { cursor: wait; }
-.form-trust {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 16px; font-size: 12px; color: #888;
-  margin-top: 12px;
-}
-
-/* CALENDAR STEP */
-.calendar-headline {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
-  font-size: 24px; text-align: center; color: #1A1A1A;
-  margin-bottom: 8px;
-}
-.calendar-sub { text-align: center; color: #666; font-size: 15px; margin-bottom: 24px; }
-.webhook-loading {
-  display: none;
-  text-align: center; padding: 40px 0;
-}
-.spinner {
-  width: 32px; height: 32px;
-  border: 3px solid rgba(47,175,178,0.2);
-  border-top-color: #2FAFB2;
-  border-radius: 50%;
-  margin: 0 auto 12px;
-  animation: spin 0.8s linear infinite;
-}
-.calendar-trust {
-  display: flex; flex-direction: column; gap: 6px;
-  text-align: center; margin-top: 20px;
-  color: #5A7D24; font-size: 13px; font-weight: 600;
-}
+@media (max-width: 800px) { .reviews-grid { grid-template-columns: 1fr; } }
 
 /* ABOUT */
 .about-section { background: #2FAFB2; color: #fff; padding: 80px 20px; }
@@ -696,16 +548,15 @@ header {
   .about-text { order: 1; }
 }
 .about-image {
-  width: 100%;
   aspect-ratio: 4/3;
-  object-fit: cover;
   background: rgba(255,255,255,0.15);
+  border: 2px dashed rgba(255,255,255,0.4);
   border-radius: 16px;
-  display: block;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 24px; color: #fff;
 }
 .about-image .ph-icon { font-size: 36px; margin-bottom: 10px; }
-.about-image .ph-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+.about-image .ph-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; margin-bottom: 4px; }
 .about-image .ph-file { font-size: 12px; opacity: 0.85; font-family: monospace; }
 .about-label {
   font-size: 12px; color: rgba(255,255,255,0.7);
@@ -717,24 +568,21 @@ header {
   font-size: 30px; color: #fff; margin-bottom: 16px;
 }
 .about-body {
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px; color: rgba(255,255,255,0.88);
-  line-height: 1.8; margin-bottom: 20px;
+  line-height: 1.8; margin-bottom: 16px;
 }
 .value-pills {
   display: inline-flex; flex-wrap: wrap; gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .value-pill {
   background: #fff; color: #2FAFB2;
   font-family: 'Poppins', sans-serif; font-weight: 600;
   padding: 8px 20px; border-radius: 999px; font-size: 14px;
 }
-.friendly-biz {
-  font-size: 13px; color: rgba(255,255,255,0.85);
-}
-@media (max-width: 600px) {
-  .about-headline { font-size: 24px; }
-}
+.friendly-biz { font-size: 13px; color: rgba(255,255,255,0.85); }
+@media (max-width: 600px) { .about-headline { font-size: 24px; } }
 
 /* FAQ */
 .faq-section { background: #fff; padding: 80px 20px; }
@@ -749,28 +597,27 @@ header {
 .faq-chevron {
   color: #2FAFB2; font-size: 18px;
   transition: transform 0.25s ease;
-  flex-shrink: 0;
-  margin-left: 12px;
+  flex-shrink: 0; margin-left: 12px;
 }
 .faq-answer {
   display: none;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px; color: #555; line-height: 1.7;
   padding: 0 0 20px;
 }
 
 /* FINAL CTA */
-.final-cta-section {
+.final-cta {
   background: #ECA340; padding: 80px 20px;
   text-align: center;
 }
 .final-urgency {
   display: inline-block;
   background: #DA4237; color: #fff;
-  font-family: 'Open Sans', sans-serif; font-weight: 600;
-  font-size: 13px;
-  padding: 8px 18px; border-radius: 999px;
+  font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 13px;
+  padding: 8px 24px; border-radius: 999px;
   margin-bottom: 20px;
-  animation: pulse 2.4s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 .final-headline {
   font-family: 'Poppins', sans-serif; font-weight: 700;
@@ -778,8 +625,9 @@ header {
   margin-bottom: 14px;
 }
 .final-sub {
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px; color: #333;
-  max-width: 640px; margin: 0 auto 18px;
+  max-width: 640px; margin: 0 auto 14px;
 }
 .final-price {
   font-family: 'Poppins', sans-serif; font-weight: 600;
@@ -796,10 +644,10 @@ header {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 .cta-final:hover { transform: scale(1.02); filter: brightness(1.05); }
-.final-trust-row {
+.final-trust {
   display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 24px; margin-top: 28px;
-  font-size: 13px; color: #333;
+  gap: 24px; margin-top: 20px;
+  font-family: 'Open Sans', sans-serif; font-size: 13px; color: #333;
 }
 @media (max-width: 600px) {
   .final-headline { font-size: 28px; }
@@ -810,19 +658,27 @@ header {
 footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 .footer-grid {
   max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
 }
 .footer-tagline {
-  font-size: 14px; color: rgba(255,255,255,0.7);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: rgba(255,255,255,0.7);
   margin: 12px 0;
 }
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 16px; }
+.footer-copy {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px; color: rgba(255,255,255,0.5);
+  margin-top: 12px;
+}
 .footer-contact-title {
   font-family: 'Poppins', sans-serif; font-weight: 600;
   font-size: 14px; color: #fff; margin-bottom: 12px;
 }
-.footer-contact-list { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.9; }
+.footer-contact-list {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.9;
+}
+.footer-contact-list a { color: #fff; }
 .footer-contact-list a:hover { color: #ECA340; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -830,23 +686,401 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   font-size: 12px; color: rgba(255,255,255,0.5);
   margin-top: 36px;
 }
-@media (max-width: 700px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-}
+@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
 
 /* ANIMATIONS */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
+  0%,100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.05); opacity: 0.85; }
 }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes dotPulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
 }
+@keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { animation: none !important; transition: none !important; }
 }
+
+/* ═══════════════════════════════════════════════
+   SURVEY / FORM / CALENDAR / HERO-CONTENT STYLES
+   (spec — high specificity, !important to override
+   any earlier rules)
+═══════════════════════════════════════════════ */
+
+/* Hero content wrapper */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px 60px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .hero-content {
+    gap: 16px;
+    padding: 32px 20px 48px;
+  }
+}
+
+/* Survey section band */
+.section-band {
+  width: 100%;
+  background: #2FAFB2;
+  padding: 32px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-band-emoji {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+.section-band-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin: 0 0 8px 0;
+}
+.section-band-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+
+/* Survey container */
+#survey-section { background: white; }
+#survey-container {
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Question label */
+.question-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #2FAFB2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Question text */
+.question-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #1A1A1A;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+@media (max-width: 480px) {
+  .question-text { font-size: 19px; }
+}
+
+/* Options list */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Survey option */
+.survey-option {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  width: 100% !important;
+  background: white !important;
+  border: 2px solid #E5E5E5 !important;
+  border-radius: 14px !important;
+  padding: 18px 20px !important;
+  cursor: pointer !important;
+  min-height: 68px !important;
+  transition: all 0.15s ease !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+  outline: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+.survey-option:hover {
+  border-color: #2FAFB2 !important;
+  background: rgba(47,175,178,0.04) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(47,175,178,0.12);
+}
+.survey-option.selected {
+  border-color: #2FAFB2 !important;
+  background: rgba(47,175,178,0.08) !important;
+}
+
+/* Radio circle */
+.radio-circle {
+  width: 24px !important;
+  height: 24px !important;
+  border: 2px solid #CCCCCC !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.15s ease !important;
+  background: white !important;
+}
+.survey-option.selected .radio-circle {
+  border-color: #2FAFB2 !important;
+  background: #2FAFB2 !important;
+}
+.radio-inner {
+  width: 10px !important;
+  height: 10px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  opacity: 0 !important;
+  transition: opacity 0.15s !important;
+}
+.survey-option.selected .radio-inner {
+  opacity: 1 !important;
+}
+
+/* Option text */
+.option-text {
+  flex: 1 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  color: #1A1A1A !important;
+  line-height: 1.4 !important;
+}
+.survey-option.selected .option-text {
+  color: #2FAFB2 !important;
+}
+.option-subtext {
+  display: block !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  color: #888 !important;
+  margin-top: 3px !important;
+}
+.survey-option.selected .option-subtext {
+  color: rgba(47,175,178,0.8) !important;
+}
+
+/* Checkmark */
+.option-check {
+  font-size: 18px !important;
+  color: #2FAFB2 !important;
+  font-weight: 700 !important;
+  opacity: 0 !important;
+  transition: opacity 0.15s !important;
+  flex-shrink: 0 !important;
+  width: 24px !important;
+  text-align: center !important;
+}
+.survey-option.selected .option-check {
+  opacity: 1 !important;
+}
+
+/* Step dots */
+#step-dots {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  margin-top: 16px !important;
+  padding-bottom: 4px !important;
+}
+.step-dot {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+}
+.dot-active {
+  background: #ECA340 !important;
+  transform: scale(1.3) !important;
+}
+.dot-inactive {
+  background: rgba(255,255,255,0.4) !important;
+}
+.dot-complete {
+  background: #A3C854 !important;
+  color: white !important;
+}
+
+/* Section divider */
+.section-divider {
+  width: 100% !important;
+  height: 8px !important;
+  background: #1A1A1A !important;
+  display: block !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Contact section */
+#contact-section {
+  display: none;
+  background: #F8F8F8;
+}
+
+/* Calendar section */
+#calendar-section {
+  display: none;
+  background: white;
+}
+
+/* Form recap pills */
+#form-recap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #F0F0F0;
+}
+.recap-pill {
+  display: inline-block !important;
+  border-radius: 999px !important;
+  padding: 6px 16px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+.pill-teal {
+  background: rgba(47,175,178,0.1) !important;
+  border: 1px solid #2FAFB2 !important;
+  color: #2FAFB2 !important;
+}
+.pill-orange {
+  background: rgba(236,163,64,0.1) !important;
+  border: 1px solid #ECA340 !important;
+  color: #b87a00 !important;
+}
+.pill-green {
+  background: rgba(163,200,84,0.1) !important;
+  border: 1px solid #A3C854 !important;
+  color: #5a8a00 !important;
+}
+
+/* Form fields */
+.form-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #1A1A1A;
+}
+.form-input {
+  width: 100%;
+  padding: 16px 18px;
+  border: 2px solid #E5E5E5;
+  border-radius: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  background: white;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-input:focus { border-color: #2FAFB2; }
+.phone-wrap {
+  display: flex;
+  gap: 8px;
+}
+.country-select {
+  padding: 16px 10px;
+  border: 2px solid #E5E5E5;
+  border-radius: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  min-width: 110px;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color 0.2s;
+}
+.country-select:focus { border-color: #2FAFB2; }
+
+/* Submit button */
+#form-submit-btn {
+  width: 100%;
+  padding: 18px;
+  background: #ECA340;
+  color: #1A1A1A;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(236,163,64,0.4);
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 4px;
+}
+#form-submit-btn:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+#form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animations (already declared above; included again per spec for completeness) */
+@keyframes pulseSpec {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .survey-option {
+    min-height: 72px !important;
+    padding: 16px !important;
+  }
+  .form-input,
+  .country-select {
+    font-size: 16px !important;
+  }
+}
+
+/* Survey question slide visibility (keeps Typeform behavior) */
+#q1 { display: block; position: relative; }
+#q2b, #q2a { display: none; }
+
 </style>
 </head>
 <body>
@@ -863,27 +1097,33 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
+  <div class="hero-content">
     <div class="hero-media">
-      <div class="media-placeholder">
-        <div class="ph-icon">🎬</div>
-        <div class="ph-title">Video del Dr. Jovan — próximamente</div>
-        <div class="ph-file">assets/dr-jovan-video.mp4</div>
-      </div>
+      <video autoplay muted loop playsinline
+        poster="assets/orion-clinic.jpg"
+        style="width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.25);display:block;">
+        <source src="assets/dr-jovan-video.mp4" type="video/mp4">
+        <img src="assets/orion-clinic.jpg" alt="Orión Odontología Armenia" style="width:100%;border-radius:16px;">
+      </video>
     </div>
-    <div class="media-caption">El Dr. Jovan se halla directamente — video próximamente</div>
+    <div class="media-caption">Video del Dr. Jovan — próximamente</div>
 
-    <a href="#intent-section" class="scarcity-badge" data-scroll>⚠ Solo 10 cupos disponibles esta semana</a>
+    <a href="#survey-section" class="scarcity-badge" onclick="document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});">⚠ Solo 10 cupos disponibles esta semana</a>
+
     <h1 class="hero-headline">Descubre el Estado Real<br>de Tu Sonrisa</h1>
     <div class="hero-sub">y llévate un regalo de bienvenida exclusivo</div>
     <p class="hero-body">Primera Consulta de Diagnóstico Completo para nuevos pacientes en Armenia, Quindío. Radiografía + evaluación con especialista + reporte escrito personalizado.</p>
+
     <div class="hero-price">$40,000 COP</div>
     <div class="hero-price-sub">Todo incluido. Sin costos ocultos.</div>
+
     <div class="countdown">
       <span class="countdown-dot" aria-hidden="true"></span>
       <span id="cupos-count">Esta semana quedan 10 cupos — se reinicia el lunes</span>
     </div>
-    <a href="#intent-section" class="cta-primary" data-scroll>RESERVAR MI EVALUACIÓN →</a>
+
+    <a href="#survey-section" class="cta-primary" onclick="if(typeof fbq!=='undefined')fbq('track','ViewContent');document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});">Ver Si Califico →</a>
+
     <div class="hero-trust">
       ✓ Confirmación inmediata por WhatsApp<br>
       ✓ Friendly Biz certificado<br>
@@ -892,56 +1132,204 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<section class="trust-bar">
-  <div class="trust-grid">
-    <div class="trust-stat">
-      <div class="trust-value">15+</div>
-      <div class="trust-label">Años de experiencia</div>
+<div class="section-divider"></div>
+
+<!-- SURVEY -->
+<section id="survey-section">
+
+  <div class="section-band">
+    <span class="section-band-emoji">📋</span>
+    <h2 class="section-band-title">3 Preguntas Rápidas</h2>
+    <p class="section-band-subtitle">Antes de elegir tu horario,<br>cuéntanos sobre tu sonrisa.</p>
+    <div id="step-dots"></div>
+  </div>
+
+  <div id="survey-container">
+
+    <!-- Q1 INTENT -->
+    <div id="q1">
+      <span class="question-label" id="q1-label">PREGUNTA 1 DE 3</span>
+      <h3 class="question-text">¿Qué es lo que más deseas mejorar en tu sonrisa?</h3>
+      <div class="options-list">
+        <div class="survey-option" onclick="selectIntent(this,'implantes','Implantes Dentales')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Implantes Dentales</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectIntent(this,'diseno_sonrisa','Diseño de Sonrisa')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Diseño de Sonrisa</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectIntent(this,'ortodoncia','Ortodoncia')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Ortodoncia</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectIntent(this,'blanqueamiento','Blanqueamiento')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Blanqueamiento</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectIntent(this,'revision_general','Revisión General')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Revisión General</div>
+          <div class="option-check">✓</div>
+        </div>
+      </div>
     </div>
-    <div class="trust-stat">
-      <div class="trust-value">Tecnología</div>
-      <div class="trust-label">de punta</div>
+
+    <!-- Q2B CONCERN (revision only) -->
+    <div id="q2b">
+      <span class="question-label">PREGUNTA 2 DE 4</span>
+      <h3 class="question-text">¿Hay algo específico que te preocupa de tu salud dental?</h3>
+      <div class="options-list">
+        <div class="survey-option" onclick="selectConcern(this,'dolor','Tengo dolor o molestia','URGENT')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Tengo dolor o molestia</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectConcern(this,'cambios','Noto cambios en mis dientes o encías','WARM')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Noto cambios en mis dientes o encías</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectConcern(this,'apariencia','Quiero mejorar la apariencia de mi sonrisa','COSMETIC')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Quiero mejorar la apariencia de mi sonrisa</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectConcern(this,'limpieza','Quiero una limpieza general','ROUTINE')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Quiero una limpieza general</div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectConcern(this,'rutina','Es una revisión de rutina, sin molestias','ROUTINE')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Es una revisión de rutina, sin molestias</div>
+          <div class="option-check">✓</div>
+        </div>
+      </div>
     </div>
-    <div class="trust-stat">
-      <div class="trust-value">Friendly Biz</div>
-      <div class="trust-label">Certificados</div>
+
+    <!-- Q2A TIMELINE -->
+    <div id="q2a">
+      <span class="question-label" id="q2a-label">PREGUNTA 2 DE 3</span>
+      <h3 class="question-text">¿Cuándo te gustaría comenzar tu tratamiento?</h3>
+      <div class="options-list">
+        <div class="survey-option" onclick="selectTimeline(this,'lo_antes_posible','Lo antes posible','HOT')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Lo antes posible<span class="option-subtext">Quiero agendar esta semana</span></div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectTimeline(this,'proximo_mes','En el próximo mes','WARM')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">En el próximo mes<span class="option-subtext">Estoy organizando mi agenda</span></div>
+          <div class="option-check">✓</div>
+        </div>
+        <div class="survey-option" onclick="selectTimeline(this,'explorando','Solo estoy explorando','COLD')">
+          <div class="radio-circle"><div class="radio-inner"></div></div>
+          <div class="option-text">Solo estoy explorando<span class="option-subtext">Todavía estoy investigando</span></div>
+          <div class="option-check">✓</div>
+        </div>
+      </div>
     </div>
-    <div class="trust-stat">
-      <div class="trust-value">Pacientes</div>
-      <div class="trust-label">Nacionales e internacionales</div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT FORM -->
+<section id="contact-section">
+
+  <div class="section-band">
+    <span class="section-band-emoji">✅</span>
+    <h2 class="section-band-title">¡Casi listo! Solo tus datos</h2>
+    <p class="section-band-subtitle">Con estos datos te confirmamos<br>la cita por WhatsApp de una.</p>
+  </div>
+
+  <div id="form-recap"></div>
+
+  <form id="lead-form" onsubmit="handleFormSubmit(event)" novalidate style="max-width:540px;margin:0 auto;padding:32px 20px;display:flex;flex-direction:column;gap:16px;">
+    <div class="form-field-wrap">
+      <label class="form-label" for="field-name">Nombre completo *</label>
+      <input id="field-name" class="form-input" type="text" placeholder="Ej. María García" autocomplete="name" required>
+    </div>
+
+    <div class="form-field-wrap">
+      <label class="form-label" for="field-phone">Número de WhatsApp *</label>
+      <div class="phone-wrap">
+        <select id="field-country-code" class="country-select" aria-label="Código de país">
+          <option value="+57" selected>🇨🇴 +57</option>
+          <option value="+1">🇺🇸 +1</option>
+          <option value="+52">🇲🇽 +52</option>
+          <option value="+34">🇪🇸 +34</option>
+          <option value="+54">🇦🇷 +54</option>
+          <option value="+56">🇨🇱 +56</option>
+          <option value="+51">🇵🇪 +51</option>
+        </select>
+        <input id="field-phone" class="form-input" type="tel" placeholder="300 000 0000" autocomplete="tel" required style="flex:1;min-width:0;">
+      </div>
+    </div>
+
+    <div class="form-field-wrap">
+      <label class="form-label" for="field-email">Correo electrónico *</label>
+      <input id="field-email" class="form-input" type="email" placeholder="ejemplo@correo.com" autocomplete="email" required>
+    </div>
+
+    <div id="form-error">Oops, falta un dato. Revisa los campos marcados y vuelve a intentarlo.</div>
+
+    <p class="form-privacy">🔒 Tranquilo/a, tus datos están seguros. Solo los usamos para confirmar tu cita.</p>
+
+    <button id="form-submit-btn" type="submit">Quiero Ver los Horarios →</button>
+
+    <div class="form-trust">
+      <span>✓ Confirmación inmediata por WhatsApp</span>
+      <span>✓ Sin spam. Sin compromisos.</span>
+      <span>✓ Friendly Biz certificado</span>
+    </div>
+  </form>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CALENDAR -->
+<section id="calendar-section">
+
+  <div class="section-band">
+    <span class="section-band-emoji">📅</span>
+    <h2 class="section-band-title">Elige Tu Horario</h2>
+    <p class="section-band-subtitle">Confirmación inmediata.<br>Sin filas. Sin esperas.</p>
+  </div>
+
+  <div id="webhook-loading" style="display:none;text-align:center;padding:48px 20px;">
+    <div style="width:36px;height:36px;border:3px solid #E5E5E5;border-top-color:#2FAFB2;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto;"></div>
+    <p style="font-family:'Open Sans',sans-serif;font-size:13px;color:#888;margin-top:16px;">Preparando tu calendario...</p>
+  </div>
+
+  <div id="calendar-wrap" style="display:none;max-width:800px;margin:0 auto;padding:0 20px 48px;">
+    <iframe
+      src="https://link.azevedogroup.com/widget/booking/pSbUG88su4sFlb3ASeeh"
+      style="width:100%;border:none;overflow:hidden;min-height:700px;"
+      scrolling="no"
+      id="pSbUG88su4sFlb3ASeeh_1777922703728">
+    </iframe>
+    <script src="https://link.azevedogroup.com/js/form_embed.js" type="text/javascript"></script>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:20px;">
+      <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ Confirmación por WhatsApp</span>
+      <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ Recordatorio 24h antes</span>
+      <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ $40,000 COP todo incluido</span>
     </div>
   </div>
 </section>
 
-<!-- THE PROBLEM -->
-<section class="section problem-section">
-  <div class="section-label">POR QUÉ ESTO IMPORTA</div>
-  <div class="section-divider"></div>
-  <h2 class="section-headline">La mayoría descubre tarde que un pequeño problema dental se convirtió en algo mayor.</h2>
-  <div class="pain-grid">
-    <div class="pain-card">
-      <div class="pain-icon">🦷</div>
-      <div class="pain-title">¿Cuándo fue tu última revisión?</div>
-      <p class="pain-body">El 70% de los problemas dentales no duelen hasta que es demasiado tarde para una solución simple.</p>
-    </div>
-    <div class="pain-card">
-      <div class="pain-icon">🔬</div>
-      <div class="pain-title">¿Conoces el estado real de tu sonrisa?</div>
-      <p class="pain-body">Sin una radiografía panorámica, ni el mejor especialista puede darte un diagnóstico completo y honesto.</p>
-    </div>
-    <div class="pain-card">
-      <div class="pain-icon">⏰</div>
-      <div class="pain-title">¿Has pospuesto ir al dentista?</div>
-      <p class="pain-body">Cada mes que pasa, una pequeña caries puede convertirse en una endodoncia — o peor, en la pérdida de un diente.</p>
-    </div>
-  </div>
-</section>
+<div class="section-divider"></div>
 
-<!-- THE OFFER -->
-<section class="section offer-section">
+<!-- VALUE STACK -->
+<section class="section value-section">
   <div class="section-label">LO QUE INCLUYE TU CONSULTA</div>
-  <div class="section-divider"></div>
+  <div class="section-divider-line"></div>
   <h2 class="section-headline">Todo esto por solo $40,000 COP</h2>
   <div class="offer-card">
     <div class="offer-item">
@@ -970,15 +1358,14 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
     </div>
   </div>
   <p class="offer-foot">Solo para nuevos pacientes. Cupos muy limitados por semana.</p>
-  <div class="offer-cta-wrap">
-    <a href="#intent-section" class="cta-teal" data-scroll>QUIERO MI EVALUACIÓN →</a>
-  </div>
 </section>
+
+<div class="section-divider"></div>
 
 <!-- TESTIMONIAL -->
 <section class="section testimonial-section">
   <div class="section-label">LO QUE DICEN NUESTROS PACIENTES</div>
-  <div class="section-divider"></div>
+  <div class="section-divider-line"></div>
   <div class="testimonial-card">
     <div class="testimonial-quote-mark" aria-hidden="true">"</div>
     <p class="testimonial-text">Llevo más de 10 años yendo a Orión Odontología, atendido por el Dr. Jovan y el Dr. William, con excelentes resultados. Son muy profesionales y proactivos en el diagnóstico y tratamiento.</p>
@@ -996,34 +1383,36 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- GOOGLE REVIEWS -->
 <section class="section reviews-section">
   <div class="section-label">RESEÑAS VERIFICADAS DE GOOGLE</div>
-  <div class="section-divider"></div>
+  <div class="section-divider-line"></div>
   <p class="reviews-subtext">Haz clic en cualquier reseña para verificarla directamente en Google.</p>
   <div class="reviews-grid">
-    <a href="https://maps.app.goo.gl/7wnaFcbvLxQ3Qk3w9" target="_blank" rel="noopener" class="review-card">
+    <a href="https://maps.app.goo.gl/7wnaFcbvLxQ3Qk3w9" target="_blank" rel="noopener noreferrer" class="review-card">
       <div class="review-head">
         <div class="avatar" style="background:#2FAFB2;">ML</div>
         <div>
           <div class="patient-name">Mauricio Lopez</div>
-          <div class="patient-tag">Paciente hace 10+ años · Armenia, Quindío</div>
+          <div class="patient-tag">Paciente 10+ años · Armenia, Quindío</div>
         </div>
       </div>
       <div class="stars">★★★★★</div>
-      <p class="review-quote">"Llevo más de 10 años yendo a Orión Odontología, atendido por el Dr. Jovan y el Dr. William, con excelentes resultados. Muy profesionales y proactivos en el diagnóstico."</p>
+      <p class="review-quote">"Llevo más de 10 años yendo a Orión Odontología, atendido por el Dr. Jovan y el Dr. William, con excelentes resultados. Muy profesionales y proactivos."</p>
       <div class="review-foot">
         <svg width="14" height="14" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571.001-.001.002-.001.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
         Verificar en Google →
       </div>
     </a>
 
-    <a href="https://maps.app.goo.gl/8TrwZdsbvBez2mNSA" target="_blank" rel="noopener" class="review-card">
+    <a href="https://maps.app.goo.gl/8TrwZdsbvBez2mNSA" target="_blank" rel="noopener noreferrer" class="review-card">
       <div class="review-head">
         <div class="avatar" style="background:#ECA340;">AY</div>
         <div>
           <div class="patient-name">Angela Yanez</div>
-          <div class="patient-tag">Paciente recurrente · Orión Odontología</div>
+          <div class="patient-tag">Paciente recurrente · Orión</div>
         </div>
       </div>
       <div class="stars">★★★★★</div>
@@ -1034,7 +1423,7 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
       </div>
     </a>
 
-    <a href="https://maps.app.goo.gl/TByQ3SnHW45DTbqq8" target="_blank" rel="noopener" class="review-card">
+    <a href="https://maps.app.goo.gl/TByQ3SnHW45DTbqq8" target="_blank" rel="noopener noreferrer" class="review-card">
       <div class="review-head">
         <div class="avatar" style="background:#A3C854;">JJ</div>
         <div>
@@ -1056,212 +1445,21 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
     <div class="google-summary-rating">4.8</div>
     <div>
       <div class="stars" style="font-size:20px;">★★★★★</div>
-      <div class="google-summary-text">Calificación verificada en Google</div>
+      <div class="google-summary-text">Calificación en Google</div>
     </div>
-    <a href="https://maps.app.goo.gl/7wnaFcbvLxQ3Qk3w9" target="_blank" rel="noopener" class="btn-pill-outline">Ver todas →</a>
+    <a href="https://maps.app.goo.gl/7wnaFcbvLxQ3Qk3w9" target="_blank" rel="noopener noreferrer" class="btn-pill-outline">Ver todas →</a>
   </div>
-  <p class="reviews-legal">Reseñas publicadas voluntariamente en Google por pacientes de Orión Odontología. Haz clic para verificar.</p>
+  <p class="reviews-legal">Reseñas publicadas voluntariamente en Google por pacientes de Orión. Haz clic para verificar.</p>
 </section>
 
-<!-- INTENT / BOOKING -->
-<section id="intent-section" class="intent-section">
-  <div class="intent-inner">
-    <div class="progress-wrap">
-      <span id="step-label" class="progress-label">Paso 1 de 3</span>
-      <span id="step-pct" class="progress-pct">33%</span>
-    </div>
-    <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:33%;"></div></div>
-
-    <!-- STEP 1 — INTENT -->
-    <div id="step-1" class="intent-step">
-      <div class="section-label">RESERVA TU CUPO</div>
-      <div class="section-divider" style="width:60px;height:4px;"></div>
-      <h2 class="intent-step-headline">Antes de elegir tu horario, cuéntanos:</h2>
-      <p class="intent-step-sub">¿Qué es lo que más deseas mejorar en tu sonrisa?</p>
-      <div class="intent-grid">
-        <div class="intent-card" onclick="selectIntent('implantes','Implantes Dentales')">
-          <div class="checkmark-badge">✓</div>
-          <div class="intent-card-emoji">🦷</div>
-          <div class="intent-card-label">Implantes Dentales</div>
-        </div>
-        <div class="intent-card" onclick="selectIntent('diseno_sonrisa','Diseño de Sonrisa')">
-          <div class="checkmark-badge">✓</div>
-          <div class="intent-card-emoji">😁</div>
-          <div class="intent-card-label">Diseño de Sonrisa</div>
-        </div>
-        <div class="intent-card" onclick="selectIntent('ortodoncia','Ortodoncia')">
-          <div class="checkmark-badge">✓</div>
-          <div class="intent-card-emoji">📐</div>
-          <div class="intent-card-label">Ortodoncia</div>
-        </div>
-        <div class="intent-card" onclick="selectIntent('blanqueamiento','Blanqueamiento')">
-          <div class="checkmark-badge">✓</div>
-          <div class="intent-card-emoji">✨</div>
-          <div class="intent-card-label">Blanqueamiento</div>
-        </div>
-        <div class="intent-card intent-card-full" onclick="selectIntent('revision_general','Revisión General')">
-          <div class="checkmark-badge">✓</div>
-          <div class="intent-card-emoji">🔍</div>
-          <div class="intent-card-label">Revisión General</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 2B — CONCERN (revision only) -->
-    <div id="step-2b" class="intent-step" style="display:none;">
-      <div class="recap-pills"><span class="pill pill-teal">✓ Revisión General</span></div>
-      <h2 class="intent-step-headline" style="font-size:26px;">Una pregunta más:</h2>
-      <p class="intent-step-sub" style="font-size:15px;">¿Hay algo específico que te preocupa de tu salud dental?</p>
-      <div class="stack-list">
-        <div class="stack-card concern-card" onclick="selectConcern('dolor','Tengo dolor o molestia','URGENT')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">😬</div>
-          <div class="stack-text"><div class="stack-title">Tengo dolor o molestia</div></div>
-        </div>
-        <div class="stack-card concern-card" onclick="selectConcern('cambios','Noto cambios en mis dientes o encías','WARM')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">👀</div>
-          <div class="stack-text"><div class="stack-title">Noto cambios en mis dientes o encías</div></div>
-        </div>
-        <div class="stack-card concern-card" onclick="selectConcern('apariencia','Quiero mejorar la apariencia de mi sonrisa','COSMETIC')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">✨</div>
-          <div class="stack-text"><div class="stack-title">Quiero mejorar la apariencia de mi sonrisa</div></div>
-        </div>
-        <div class="stack-card concern-card" onclick="selectConcern('limpieza','Quiero una limpieza general','ROUTINE')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">🦷</div>
-          <div class="stack-text"><div class="stack-title">Quiero una limpieza general</div></div>
-        </div>
-        <div class="stack-card concern-card" onclick="selectConcern('rutina','Es una revisión de rutina, no tengo molestias','ROUTINE')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">📋</div>
-          <div class="stack-text"><div class="stack-title">Es una revisión de rutina, no tengo molestias</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 2A — TIMELINE -->
-    <div id="step-2a" class="intent-step" style="display:none;">
-      <div class="recap-pills"><span id="intent-recap" class="pill pill-teal">✓ <span id="intent-recap-text"></span></span></div>
-      <h2 class="intent-step-headline" style="font-size:26px;">¿Cuándo te gustaría comenzar?</h2>
-      <p class="intent-step-sub" style="font-size:15px;">Esto nos ayuda a preparar la mejor atención para ti.</p>
-      <div class="stack-list">
-        <div class="stack-card timeline-card" onclick="selectTimeline('lo_antes_posible','Lo antes posible','HOT')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">🚀</div>
-          <div class="stack-text">
-            <div class="stack-title">Lo antes posible</div>
-            <div class="stack-sub">Quiero agendar esta semana</div>
-          </div>
-        </div>
-        <div class="stack-card timeline-card" onclick="selectTimeline('proximo_mes','En el próximo mes','WARM')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">📅</div>
-          <div class="stack-text">
-            <div class="stack-title">En el próximo mes</div>
-            <div class="stack-sub">Estoy organizando mi agenda</div>
-          </div>
-        </div>
-        <div class="stack-card timeline-card" onclick="selectTimeline('explorando','Solo estoy explorando opciones','COLD')">
-          <div class="checkmark-badge">✓</div>
-          <div class="stack-emoji">🔎</div>
-          <div class="stack-text">
-            <div class="stack-title">Solo estoy explorando opciones</div>
-            <div class="stack-sub">Todavía estoy investigando</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 3 — CONTACT FORM -->
-    <div id="step-contact" class="intent-step" style="display:none;">
-      <div class="recap-pills">
-        <span id="contact-pill-intent" class="pill pill-teal"></span>
-        <span id="contact-pill-timeline" class="pill pill-orange"></span>
-      </div>
-      <h2 class="intent-step-headline" style="font-size:26px;">¡Casi listo! Cuéntanos quién eres.</h2>
-      <p class="intent-step-sub" style="font-size:15px;">Con estos datos te confirmamos la cita por WhatsApp de una.</p>
-
-      <form class="form-wrap" onsubmit="handleFormSubmit(event)" novalidate>
-        <div class="form-field">
-          <label class="form-label" for="field-name">Nombre completo *</label>
-          <input id="field-name" class="form-input" type="text" placeholder="Ej. María García" autocomplete="name" required>
-        </div>
-
-        <div class="form-field">
-          <label class="form-label" for="field-phone">Número de WhatsApp *</label>
-          <div class="phone-row">
-            <select id="field-country-code" class="form-select" aria-label="Código de país">
-              <option value="+57" selected>🇨🇴 +57</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+52">🇲🇽 +52</option>
-              <option value="+34">🇪🇸 +34</option>
-              <option value="+54">🇦🇷 +54</option>
-              <option value="+56">🇨🇱 +56</option>
-              <option value="+51">🇵🇪 +51</option>
-            </select>
-            <input id="field-phone" class="form-input" type="tel" placeholder="300 000 0000" autocomplete="tel" required>
-          </div>
-        </div>
-
-        <div class="form-field">
-          <label class="form-label" for="field-email">Correo electrónico *</label>
-          <input id="field-email" class="form-input" type="email" placeholder="ejemplo@correo.com" autocomplete="email" required>
-        </div>
-
-        <div id="form-error" class="form-error">Oops, falta un dato. Revisa los campos marcados y vuelve a intentarlo.</div>
-
-        <p class="form-privacy">🔒 Tranquilo/a, tus datos están seguros. Solo los usamos para confirmar tu cita.</p>
-
-        <button id="form-submit-btn" type="submit" class="form-submit">Quiero Ver los Horarios →</button>
-
-        <div class="form-trust">
-          <span>✓ Confirmación inmediata por WhatsApp</span>
-          <span>✓ Sin spam. Sin compromisos.</span>
-          <span>✓ Friendly Biz certificado</span>
-        </div>
-      </form>
-    </div>
-
-    <!-- STEP 4 — CALENDAR -->
-    <div id="step-3" class="intent-step" style="display:none;">
-      <div class="recap-pills">
-        <span id="summary-intent" class="pill pill-teal"></span>
-        <span id="summary-timeline" class="pill pill-orange"></span>
-        <span id="summary-concern" class="pill pill-lime" style="display:none;"></span>
-      </div>
-      <h2 class="calendar-headline">Perfecto. Ahora elige tu horario:</h2>
-      <p class="calendar-sub">Confirmación inmediata. Sin filas. Sin esperas.</p>
-
-      <div id="webhook-loading" class="webhook-loading">
-        <div class="spinner"></div>
-        <div style="font-size:13px;color:#666;">Preparando tu cita...</div>
-      </div>
-
-      <div id="calendar-wrap">
-        <iframe
-          src="https://link.azevedogroup.com/widget/booking/pSbUG88su4sFlb3ASeeh"
-          style="width:100%;border:none;overflow:hidden;min-height:680px;border-radius:14px;background:#fff;"
-          scrolling="no"
-          id="pSbUG88su4sFlb3ASeeh_1777922703728">
-        </iframe>
-        <script src="https://link.azevedogroup.com/js/form_embed.js" type="text/javascript"></script>
-
-        <div class="calendar-trust">
-          <div>✓ Confirmación por WhatsApp inmediata</div>
-          <div>✓ Recordatorio 24 horas antes de tu cita</div>
-          <div>✓ Sin costo adicional — $40,000 COP todo incluido</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="section-divider"></div>
 
 <!-- ABOUT -->
 <section class="about-section">
   <div class="about-grid">
-    <img class="about-image" src="assets/dr-jovan-patient.jpeg" alt="Dr. Jovan atendiendo a un paciente en Orión Odontología" loading="lazy">
+    <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 12px 40px rgba(0,0,0,0.2);">
+      <img src="assets/dr-jovan-patient.jpg" alt="Dr. Jovan con paciente en Orión Odontología Armenia" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
     <div class="about-text">
       <div class="about-label">QUIÉNES SOMOS</div>
       <h2 class="about-headline">Orión Odontología Integrativa IPS</h2>
@@ -1277,10 +1475,12 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- FAQ -->
 <section class="faq-section">
   <div class="section-label">PREGUNTAS FRECUENTES</div>
-  <div class="section-divider"></div>
+  <div class="section-divider-line"></div>
   <h2 class="section-headline">Todo lo que necesitas saber</h2>
   <div class="faq-list">
     <div class="faq-item">
@@ -1288,21 +1488,21 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
         <span>¿Necesito historia clínica previa?</span>
         <span class="faq-chevron">▾</span>
       </div>
-      <div class="faq-answer">No. Esta es tu primera visita en Orión y comenzamos desde cero contigo. No necesitas traer ningún documento previo.</div>
+      <div class="faq-answer">No. Esta es tu primera visita en Orión y comenzamos desde cero. No necesitas traer ningún documento previo.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">
         <span>¿La radiografía panorámica duele?</span>
         <span class="faq-chevron">▾</span>
       </div>
-      <div class="faq-answer">Para nada. Es completamente digital, tarda menos de 2 minutos y no requiere ningún procedimiento invasivo. Es simplemente una imagen de tus dientes.</div>
+      <div class="faq-answer">Para nada. Es digital, tarda menos de 2 minutos y no es invasiva. Solo una imagen de tus dientes.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">
         <span>¿Qué pasa si no tengo la radiografía?</span>
         <span class="faq-chevron">▾</span>
       </div>
-      <div class="faq-answer">Al confirmar tu cita te enviamos por WhatsApp la orden para tomarla en nuestro centro radiológico aliado. El valor es de $27,000 COP y no necesitas cita previa. Tenemos 4 sedes en Armenia y Quimbaya.</div>
+      <div class="faq-answer">Al confirmar tu cita te enviamos por WhatsApp la orden para tomarla en nuestro centro radiológico aliado. Valor: $27,000 COP. Sin cita previa. 4 sedes en Armenia y Quimbaya.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">
@@ -1316,19 +1516,21 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
         <span>¿Dónde están ubicados?</span>
         <span class="faq-chevron">▾</span>
       </div>
-      <div class="faq-answer">Calle 23 Norte N° 15-35 Local 7, Edificio Oasis de Laureles, Armenia, Quindío. Fácil acceso y parqueadero disponible cerca.</div>
+      <div class="faq-answer">Calle 23 Norte N° 15-35 Local 7, Edificio Oasis de Laureles, Armenia, Quindío. Fácil acceso y parqueadero disponible.</div>
     </div>
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- FINAL CTA -->
-<section class="final-cta-section">
+<section class="final-cta">
   <div class="final-urgency">⚠ Últimos cupos disponibles esta semana</div>
-  <h2 class="final-headline">Tu sonrisa merece atención de primer nivel.</h2>
+  <h2 class="final-headline">Tu sonrisa merece atención<br>de primer nivel.</h2>
   <p class="final-sub">Reserva tu Primera Consulta de Diagnóstico Completo y llévate tu regalo de bienvenida.</p>
   <div class="final-price">$40,000 COP — Radiografía + Evaluación + Reporte + Regalo</div>
-  <a href="#intent-section" class="cta-final" data-scroll>RESERVAR MI CUPO AHORA →</a>
-  <div class="final-trust-row">
+  <a href="#survey-section" class="cta-final" onclick="document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});">RESERVAR MI CUPO AHORA →</a>
+  <div class="final-trust">
     <span>🔒 Pago seguro el día de tu cita</span>
     <span>✓ Sin compromisos adicionales</span>
     <span>✓ Confirmación inmediata</span>
@@ -1358,7 +1560,9 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 </footer>
 
 <script>
-// LEAD DATA STATE
+// ═══════════════════════════
+// STATE
+// ═══════════════════════════
 const leadData = {
   intent: '', intentLabel: '', intentPriority: '',
   timeline: '', timelineLabel: '', timelinePriority: '',
@@ -1366,67 +1570,123 @@ const leadData = {
   name: '', email: '', phone: '', countryCode: '+57'
 };
 
+let currentQuestion = 'q1';
+let isRevisionPath = false;
+let totalSteps = 3;
+
+// ═══════════════════════════
 // COUNTDOWN TIMER
+// ═══════════════════════════
 (function initCountdown() {
   try {
-    const now = new Date();
-    const utcMinus5 = new Date(now.getTime() - (5 * 60 * 60 * 1000));
-    const startOfWeek = new Date(utcMinus5);
-    startOfWeek.setUTCDate(utcMinus5.getUTCDate() - utcMinus5.getUTCDay());
-    startOfWeek.setUTCHours(0,0,0,0);
-    const weekKey = 'orion_cupos_' + startOfWeek.getTime();
+    const weekKey = 'orion_week_' + Math.floor(Date.now() / 604800000);
     const sessionKey = 'orion_visited';
-
     let cupos = parseInt(localStorage.getItem(weekKey) || '10');
-
     if (!sessionStorage.getItem(sessionKey)) {
       cupos = Math.max(1, cupos - 1);
       localStorage.setItem(weekKey, cupos);
       sessionStorage.setItem(sessionKey, '1');
     }
-
     const el = document.getElementById('cupos-count');
-    if (el) {
-      el.textContent = cupos === 1
-        ? '¡Solo queda 1 cupo!'
-        : 'Esta semana quedan ' + cupos + ' cupos — se reinicia el lunes';
-    }
+    if (el) el.textContent = cupos === 1
+      ? '¡Solo queda 1 cupo esta semana!'
+      : 'Esta semana quedan ' + cupos + ' cupos — se reinicia el lunes';
   } catch(e) { /* ignore localStorage errors */ }
 })();
 
-// STEP NAVIGATION
-function showStep(stepId) {
-  const allSteps = ['step-1','step-2a','step-2b','step-contact','step-3'];
-  allSteps.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = 'none';
-  });
-  const target = document.getElementById(stepId);
-  if (target) {
-    target.style.display = 'block';
-    target.style.opacity = '0';
-    target.style.transition = 'opacity 0.35s ease';
-    setTimeout(() => { target.style.opacity = '1'; }, 50);
+// ═══════════════════════════
+// STEP DOTS
+// ═══════════════════════════
+function rebuildDots(total) {
+  const container = document.getElementById('step-dots');
+  if (!container) return;
+  container.innerHTML = '';
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'step-dot dot-inactive';
+    container.appendChild(dot);
   }
+}
+
+function updateDots(currentStep) {
+  const dots = document.querySelectorAll('.step-dot');
+  dots.forEach((dot, i) => {
+    dot.classList.remove('dot-active','dot-complete','dot-inactive');
+    if (i < currentStep - 1) {
+      dot.classList.add('dot-complete');
+      dot.textContent = '✓';
+    } else if (i === currentStep - 1) {
+      dot.classList.add('dot-active');
+      dot.textContent = '';
+    } else {
+      dot.classList.add('dot-inactive');
+      dot.textContent = '';
+    }
+  });
+}
+
+// ═══════════════════════════
+// SLIDE TRANSITION
+// ═══════════════════════════
+function slideTo(fromId, toId, direction) {
+  const from = document.getElementById(fromId);
+  const to = document.getElementById(toId);
+  if (!from || !to) return;
+
+  const container = document.getElementById('survey-container');
+  const containerHeight = from.offsetHeight;
+  container.style.height = containerHeight + 'px';
+  container.style.overflow = 'hidden';
+
+  to.style.display = 'block';
+  to.style.position = 'absolute';
+  to.style.top = '0';
+  to.style.left = '0';
+  to.style.width = '100%';
+  to.style.transform = direction === 'forward' ? 'translateX(100%)' : 'translateX(-100%)';
+
+  from.style.position = 'absolute';
+  from.style.top = '0';
+  from.style.left = '0';
+  from.style.width = '100%';
+
+  to.getBoundingClientRect();
+
+  const easing = 'cubic-bezier(0.4, 0, 0.2, 1)';
+  const duration = '0.4s';
+
+  from.style.transition = 'transform ' + duration + ' ' + easing;
+  to.style.transition = 'transform ' + duration + ' ' + easing;
+
+  from.style.transform = direction === 'forward' ? 'translateX(-100%)' : 'translateX(100%)';
+  to.style.transform = 'translateX(0)';
+
   setTimeout(() => {
-    const section = document.getElementById('intent-section');
-    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 100);
+    from.style.display = 'none';
+    from.style.position = '';
+    from.style.transform = '';
+    from.style.transition = '';
+    to.style.position = 'relative';
+    to.style.transition = '';
+    container.style.height = '';
+    container.style.overflow = '';
+
+    document.getElementById('survey-section').scrollIntoView({behavior:'smooth',block:'start'});
+
+    const newHeight = to.offsetHeight;
+    container.style.height = newHeight + 'px';
+    setTimeout(() => { container.style.height = ''; }, 300);
+
+    currentQuestion = toId;
+  }, 420);
 }
 
-function updateProgress(step, total, pct) {
-  const label = document.getElementById('step-label');
-  const fill = document.getElementById('progress-fill');
-  const pctEl = document.getElementById('step-pct');
-  if (label) label.textContent = 'Paso ' + step + ' de ' + total;
-  if (fill) fill.style.width = pct + '%';
-  if (pctEl) pctEl.textContent = pct + '%';
-}
-
-// STEP 1 — INTENT
-function selectIntent(value, label) {
-  document.querySelectorAll('.intent-card').forEach(c => c.classList.remove('selected'));
-  event.currentTarget.classList.add('selected');
+// ═══════════════════════════
+// Q1 — INTENT
+// ═══════════════════════════
+function selectIntent(el, value, label) {
+  document.querySelectorAll('#q1 .survey-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
 
   leadData.intent = value;
   leadData.intentLabel = label;
@@ -1437,103 +1697,135 @@ function selectIntent(value, label) {
     : value === 'blanqueamiento' ? 'MEDIUM'
     : 'STANDARD';
 
-  const values = {
+  isRevisionPath = (value === 'revision_general');
+  totalSteps = isRevisionPath ? 4 : 3;
+  rebuildDots(totalSteps);
+  updateDots(1);
+
+  // Update Q1 label to reflect total
+  const q1Label = document.getElementById('q1-label');
+  if (q1Label) q1Label.textContent = 'PREGUNTA 1 DE ' + totalSteps;
+
+  const vals = {
     implantes: 4000000,
     diseno_sonrisa: 3000000,
     ortodoncia: 2500000,
     blanqueamiento: 800000,
     revision_general: 200000
   };
-
   if (typeof fbq !== 'undefined') {
     fbq('track', 'Lead', {
       content_name: label,
       content_category: 'dental_intent',
       currency: 'COP',
-      value: values[value] || 200000
+      value: vals[value] || 200000
     });
   }
 
-  const recap = document.getElementById('intent-recap-text');
-  if (recap) recap.textContent = label;
-
   setTimeout(() => {
-    if (value === 'revision_general') {
-      updateProgress(1, 4, 25);
-      showStep('step-2b');
+    updateDots(2);
+    if (isRevisionPath) {
+      slideTo('q1', 'q2b', 'forward');
     } else {
-      updateProgress(1, 3, 33);
-      showStep('step-2a');
+      slideTo('q1', 'q2a', 'forward');
     }
-  }, 350);
+    updateQuestionLabel();
+  }, 500);
 }
 
-// STEP 2B — CONCERN
-function selectConcern(value, label, priority) {
-  document.querySelectorAll('.concern-card').forEach(c => c.classList.remove('selected'));
-  event.currentTarget.classList.add('selected');
+// ═══════════════════════════
+// Q2B — CONCERN
+// ═══════════════════════════
+function selectConcern(el, value, label, priority) {
+  document.querySelectorAll('#q2b .survey-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
 
   leadData.concern = value;
   leadData.concernLabel = label;
   leadData.concernPriority = priority;
 
-  if (value === 'apariencia') {
-    leadData.intentPriority = 'HIGH';
-  }
+  if (value === 'apariencia') leadData.intentPriority = 'HIGH';
 
   setTimeout(() => {
-    updateProgress(2, 4, 50);
-    showStep('step-2a');
-  }, 350);
+    updateDots(3);
+    slideTo('q2b', 'q2a', 'forward');
+    updateQuestionLabel();
+  }, 500);
 }
 
-// STEP 2A — TIMELINE
-function selectTimeline(value, label, priority) {
-  document.querySelectorAll('.timeline-card').forEach(c => c.classList.remove('selected'));
-  event.currentTarget.classList.add('selected');
+// ═══════════════════════════
+// Q2A — TIMELINE
+// ═══════════════════════════
+function selectTimeline(el, value, label, priority) {
+  document.querySelectorAll('#q2a .survey-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
 
   leadData.timeline = value;
   leadData.timelineLabel = label;
   leadData.timelinePriority = priority;
 
   setTimeout(() => {
-    showContactForm();
-  }, 350);
+    updateDots(totalSteps);
+    showContactSection();
+  }, 500);
 }
 
-// CONTACT FORM
-function showContactForm() {
-  const isRevision = leadData.intent === 'revision_general';
-  updateProgress(isRevision ? 3 : 2, isRevision ? 4 : 3, isRevision ? 75 : 66);
-
-  const pi = document.getElementById('contact-pill-intent');
-  const pt = document.getElementById('contact-pill-timeline');
-  if (pi) pi.textContent = '✓ ' + leadData.intentLabel;
-  if (pt) pt.textContent = '✓ ' + leadData.timelineLabel;
-
-  updateSummaryPills();
-  showStep('step-contact');
+// ═══════════════════════════
+// SHOW CONTACT SECTION
+// ═══════════════════════════
+function showContactSection() {
+  const contactSection = document.getElementById('contact-section');
+  if (contactSection) {
+    contactSection.style.display = 'block';
+    setTimeout(() => {
+      contactSection.scrollIntoView({behavior:'smooth',block:'start'});
+      const nameField = document.getElementById('field-name');
+      if (nameField) setTimeout(() => nameField.focus({preventScroll:true}), 600);
+    }, 100);
+  }
+  renderRecapPills();
 }
 
+function renderRecapPills() {
+  const recap = document.getElementById('form-recap');
+  if (!recap) return;
+  let html = '';
+  if (leadData.intentLabel) html += '<span class="recap-pill pill-teal">✓ ' + leadData.intentLabel + '</span>';
+  if (leadData.timelineLabel) html += '<span class="recap-pill pill-orange">✓ ' + leadData.timelineLabel + '</span>';
+  if (leadData.concernLabel) html += '<span class="recap-pill pill-green">✓ ' + leadData.concernLabel + '</span>';
+  recap.innerHTML = html;
+}
+
+function updateQuestionLabel() {
+  const q2aLabel = document.getElementById('q2a-label');
+  if (!q2aLabel) return;
+  const step = isRevisionPath ? 3 : 2;
+  q2aLabel.textContent = 'PREGUNTA ' + step + ' DE ' + totalSteps;
+}
+
+// ═══════════════════════════
+// FORM SUBMIT
+// ═══════════════════════════
 async function handleFormSubmit(e) {
   e.preventDefault();
 
   const name = document.getElementById('field-name').value.trim();
   const phone = document.getElementById('field-phone').value.trim();
-  const countryCode = document.getElementById('field-country-code').value;
+  const cc = document.getElementById('field-country-code').value;
   const email = document.getElementById('field-email').value.trim();
   const errorEl = document.getElementById('form-error');
   const btn = document.getElementById('form-submit-btn');
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const digitsOnly = phone.replace(/\D/g,'');
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const digits = phone.replace(/\D/g,'');
 
-  if (!name || !emailRegex.test(email) || digitsOnly.length < 7) {
+  if (!name || !emailOk || digits.length < 7) {
     if (errorEl) {
       errorEl.style.display = 'block';
-      if (!name) errorEl.textContent = 'Oops, falta tu nombre.';
-      else if (!emailRegex.test(email)) errorEl.textContent = 'Ese correo no parece válido. Revísalo.';
-      else errorEl.textContent = 'El número de WhatsApp no parece correcto.';
+      errorEl.textContent =
+        !name ? 'Oops, falta tu nombre.'
+        : !emailOk ? 'Ese correo no parece válido. Revísalo.'
+        : 'El número de WhatsApp no parece correcto.';
     }
     return;
   }
@@ -1541,36 +1833,35 @@ async function handleFormSubmit(e) {
   if (errorEl) errorEl.style.display = 'none';
 
   leadData.name = name;
-  leadData.phone = countryCode + digitsOnly;
+  leadData.phone = cc + digits;
   leadData.email = email;
-  leadData.countryCode = countryCode;
+  leadData.countryCode = cc;
 
   btn.textContent = 'Un momento...';
   btn.style.opacity = '0.7';
   btn.disabled = true;
 
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'CompleteRegistration', {
+      content_name: leadData.intentLabel,
+      currency: 'COP', value: 40000
+    });
+  }
+
   await sendToGHL();
 
-  const isRevision = leadData.intent === 'revision_general';
-  updateProgress(isRevision ? 4 : 3, isRevision ? 4 : 3, 100);
-  updateSummaryPills();
-  showStep('step-3');
-}
-
-// SUMMARY PILLS
-function updateSummaryPills() {
-  const si = document.getElementById('summary-intent');
-  const st = document.getElementById('summary-timeline');
-  const sc = document.getElementById('summary-concern');
-  if (si) si.textContent = '✓ ' + leadData.intentLabel;
-  if (st) st.textContent = '✓ ' + leadData.timelineLabel;
-  if (sc && leadData.concernLabel) {
-    sc.textContent = '✓ ' + leadData.concernLabel;
-    sc.style.display = 'inline-block';
+  const calSection = document.getElementById('calendar-section');
+  if (calSection) {
+    calSection.style.display = 'block';
+    setTimeout(() => {
+      calSection.scrollIntoView({behavior:'smooth',block:'start'});
+    }, 100);
   }
 }
 
+// ═══════════════════════════
 // PRIORITY LOGIC
+// ═══════════════════════════
 function getOverallPriority() {
   if (leadData.intentPriority === 'HIGH' && leadData.timelinePriority === 'HOT') return 'HOT';
   if (leadData.concernPriority === 'URGENT') return 'URGENT';
@@ -1582,30 +1873,32 @@ function getOverallPriority() {
 
 function buildTags() {
   const tags = ['orion-landing','evaluacion-40k'];
-  const intentTags = {
-    implantes: 'interes-implantes',
-    diseno_sonrisa: 'interes-diseno-sonrisa',
-    ortodoncia: 'interes-ortodoncia',
-    blanqueamiento: 'interes-blanqueamiento',
-    revision_general: 'interes-revision-general'
+  const iMap = {
+    implantes:'interes-implantes',
+    diseno_sonrisa:'interes-diseno-sonrisa',
+    ortodoncia:'interes-ortodoncia',
+    blanqueamiento:'interes-blanqueamiento',
+    revision_general:'interes-revision-general'
   };
-  if (intentTags[leadData.intent]) tags.push(intentTags[leadData.intent]);
-  const timelineTags = {
-    lo_antes_posible: 'timeline-inmediato',
-    proximo_mes: 'timeline-proximo-mes',
-    explorando: 'timeline-explorando'
+  const tMap = {
+    lo_antes_posible:'timeline-inmediato',
+    proximo_mes:'timeline-proximo-mes',
+    explorando:'timeline-explorando'
   };
-  if (timelineTags[leadData.timeline]) tags.push(timelineTags[leadData.timeline]);
+  if (iMap[leadData.intent]) tags.push(iMap[leadData.intent]);
+  if (tMap[leadData.timeline]) tags.push(tMap[leadData.timeline]);
   if (leadData.concern) tags.push('preocupacion-' + leadData.concern);
-  const priority = getOverallPriority();
-  tags.push('prioridad-' + priority.toLowerCase());
-  if (priority === 'HOT') tags.push('LLAMAR-INMEDIATO');
-  if (priority === 'URGENT') tags.push('URGENTE-HOY');
-  if (priority === 'COLD') tags.push('SECUENCIA-NURTURE');
+  const p = getOverallPriority();
+  tags.push('prioridad-' + p.toLowerCase());
+  if (p === 'HOT') tags.push('LLAMAR-INMEDIATO');
+  if (p === 'URGENT') tags.push('URGENTE-HOY');
+  if (p === 'COLD') tags.push('SECUENCIA-NURTURE');
   return tags.join(', ');
 }
 
+// ═══════════════════════════
 // GHL WEBHOOK
+// ═══════════════════════════
 async function sendToGHL() {
   const loader = document.getElementById('webhook-loading');
   const cal = document.getElementById('calendar-wrap');
@@ -1616,11 +1909,11 @@ async function sendToGHL() {
   const priority = getOverallPriority();
 
   const payload = {
-    firstName: leadData.name ? leadData.name.split(' ')[0] : '',
-    lastName: leadData.name ? leadData.name.split(' ').slice(1).join(' ') : '',
-    name: leadData.name || '',
-    email: leadData.email || '',
-    phone: leadData.phone || '',
+    firstName: leadData.name.split(' ')[0] || '',
+    lastName: leadData.name.split(' ').slice(1).join(' ') || '',
+    name: leadData.name,
+    email: leadData.email,
+    phone: leadData.phone,
     source: 'evaluacionorion.org',
     tags: tags,
     dental_intent: leadData.intentLabel || '',
@@ -1635,15 +1928,15 @@ async function sendToGHL() {
     timestamp: new Date().toISOString(),
     pixel_id: '1344811954211995',
     customFields: [
-      { key: 'dental_intent', field_value: leadData.intentLabel || '' },
-      { key: 'dental_intent_priority', field_value: leadData.intentPriority || '' },
-      { key: 'dental_timeline', field_value: leadData.timelineLabel || '' },
-      { key: 'dental_timeline_priority', field_value: leadData.timelinePriority || '' },
-      { key: 'dental_concern', field_value: leadData.concernLabel || 'N/A' },
-      { key: 'dental_concern_priority', field_value: leadData.concernPriority || 'N/A' },
-      { key: 'lead_priority', field_value: priority },
-      { key: 'landing_page', field_value: window.location.href },
-      { key: 'lead_timestamp', field_value: new Date().toISOString() }
+      {key:'dental_intent', field_value: leadData.intentLabel||''},
+      {key:'dental_intent_priority', field_value: leadData.intentPriority||''},
+      {key:'dental_timeline', field_value: leadData.timelineLabel||''},
+      {key:'dental_timeline_priority', field_value: leadData.timelinePriority||''},
+      {key:'dental_concern', field_value: leadData.concernLabel||'N/A'},
+      {key:'dental_concern_priority', field_value: leadData.concernPriority||'N/A'},
+      {key:'lead_priority', field_value: priority},
+      {key:'landing_page', field_value: window.location.href},
+      {key:'lead_timestamp', field_value: new Date().toISOString()}
     ]
   };
 
@@ -1652,32 +1945,24 @@ async function sendToGHL() {
       'https://services.leadconnectorhq.com/hooks/lVb1fZNupI3G31Dr2Kfh/webhook-trigger/53088fc1-0355-4f55-9ae2-2a85fe41360f',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {'Content-Type':'application/json'},
         body: JSON.stringify(payload),
         mode: 'no-cors'
       }
     );
-  } catch(err) {
-    console.warn('GHL webhook:', err);
-  }
+  } catch(err) { console.warn('GHL:', err); }
 
-  if (typeof fbq !== 'undefined') {
-    fbq('track', 'CompleteRegistration', {
-      content_name: leadData.intentLabel || '',
-      content_category: priority,
-      currency: 'COP',
-      value: 40000
-    });
-    fbq('track', 'Schedule');
-  }
+  if (typeof fbq !== 'undefined') fbq('track', 'Schedule');
 
   setTimeout(() => {
     if (loader) loader.style.display = 'none';
     if (cal) cal.style.display = 'block';
-  }, 500);
+  }, 600);
 }
 
-// IFRAME AUTO-HEIGHT + BOOKING SUCCESS
+// ═══════════════════════════
+// IFRAME + BOOKING
+// ═══════════════════════════
 window.addEventListener('message', function(e) {
   if (e.data && e.data.type === 'booking-height') {
     const iframe = document.getElementById('pSbUG88su4sFlb3ASeeh_1777922703728');
@@ -1691,42 +1976,36 @@ window.addEventListener('message', function(e) {
   }
 });
 
+// ═══════════════════════════
 // FAQ ACCORDION
+// ═══════════════════════════
 document.querySelectorAll('.faq-item').forEach(item => {
-  const question = item.querySelector('.faq-question');
-  const answer = item.querySelector('.faq-answer');
-  const chevron = item.querySelector('.faq-chevron');
-  if (question) {
-    question.addEventListener('click', () => {
-      const isOpen = answer.style.display === 'block';
-      document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-      document.querySelectorAll('.faq-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
-      if (!isOpen) {
-        answer.style.display = 'block';
-        if (chevron) chevron.style.transform = 'rotate(180deg)';
-      }
-    });
-  }
-});
-
-// SMOOTH SCROLL FOR CTAs
-document.querySelectorAll('[data-scroll]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = document.getElementById('intent-section');
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-    if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
+  const q = item.querySelector('.faq-question');
+  if (!q) return;
+  q.addEventListener('click', () => {
+    const answer = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.faq-chevron');
+    const isOpen = answer.style.display === 'block';
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+    document.querySelectorAll('.faq-chevron').forEach(c => c.style.transform = 'rotate(0deg)');
+    if (!isOpen) {
+      answer.style.display = 'block';
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+    }
   });
 });
 
+// ═══════════════════════════
 // HEADER SHADOW ON SCROLL
+// ═══════════════════════════
 window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (header) {
-    header.style.boxShadow = window.scrollY > 10
-      ? '0 2px 12px rgba(0,0,0,0.15)'
-      : 'none';
-  }
+  const h = document.querySelector('header');
+  if (h) h.style.boxShadow = window.scrollY > 10 ? '0 2px 12px rgba(0,0,0,0.15)' : 'none';
 });
+
+// Init dots
+rebuildDots(3);
+updateDots(1);
 </script>
 
 </body>

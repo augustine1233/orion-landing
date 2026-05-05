@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>¡Cita Confirmada! | Orión Odontología Armenia</title>
-<meta name="description" content="Tu cita ha sido confirmada en Orión Odontología Integrativa IPS. Te esperamos con tu regalo de bienvenida.">
+<meta name="description" content="Tu cita en Orión Odontología Integrativa IPS está confirmada. Te esperamos con tu regalo de bienvenida.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,56 +38,65 @@ body {
   margin: 0;
   font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
   color: #1A1A1A;
-  background: #FFFFFF;
+  background: #fff;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-h1,h2,h3,h4 { font-family: 'Poppins', system-ui, sans-serif; margin: 0; line-height: 1.25; }
+h1,h2,h3 { font-family: 'Poppins', sans-serif; margin: 0; line-height: 1.25; }
 a { color: inherit; text-decoration: none; }
 
-/* HEADER (same as index) */
+/* HEADER */
 header {
   position: fixed; top: 0; left: 0; right: 0;
-  height: 64px; background: #FFFFFF;
+  height: 60px; background: #FFFFFF;
   z-index: 999;
-  display: flex; align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   transition: box-shadow 0.2s ease;
 }
+.logo-mark {
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  color: #fff; font-size: 18px; line-height: 1;
+}
+.logo-sub {
+  font-size: 10px; color: rgba(255,255,255,0.7);
+  margin-top: 2px; line-height: 1;
+}
 .logo-img { display: block; height: 40px; width: auto; }
-.logo-img-footer { display: block; height: 48px; width: auto; background: #fff; padding: 8px 12px; border-radius: 10px; }
-@media (max-width: 600px) {
-  .logo-img { height: 32px; }
-  .logo-img-footer { height: 42px; }
+.logo-img-footer {
+  display: block; height: 48px; width: auto;
+  background: #fff; padding: 8px 12px; border-radius: 10px;
 }
 .header-phone {
   font-family: 'Open Sans', sans-serif; font-weight: 600;
-  color: #1A1A1A; font-size: 14px;
+  color: #1A1A1A; font-size: 13px;
   display: inline-flex; align-items: center; gap: 6px;
 }
 .header-phone:hover { color: #2FAFB2; }
 @media (max-width: 600px) {
-  header { height: 56px; padding: 0 16px; }
-  .header-phone { font-size: 13px; }
+  header { height: 52px; padding: 0 16px; }
+  .logo-mark { font-size: 17px; }
+  .logo-sub { font-size: 10px; }
+  .logo-img { height: 32px; }
+  .logo-img-footer { height: 42px; }
 }
 
-/* SUCCESS HERO */
+/* HERO SUCCESS */
 .success-hero {
   background: #2FAFB2; color: #fff;
   min-height: 60vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center;
-  padding: 140px 20px 80px;
+  padding: 100px 20px 80px;
 }
 .success-icon {
   width: 80px; height: 80px;
   background: #fff; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 44px; color: #2FAFB2;
-  font-weight: 700;
-  margin-bottom: 24px;
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 36px; color: #2FAFB2;
+  margin: 0 auto 24px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.2);
   animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -102,8 +111,9 @@ header {
   max-width: 600px; margin: 0 auto 16px;
 }
 .success-body {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px; color: rgba(255,255,255,0.85);
-  max-width: 520px; margin: 0 auto;
+  max-width: 500px; margin: 0 auto;
 }
 @media (max-width: 600px) {
   .success-headline { font-size: 30px; }
@@ -111,9 +121,7 @@ header {
 }
 
 /* NEXT STEPS */
-.next-steps {
-  background: #fff; padding: 60px 20px;
-}
+.next-steps { background: #fff; padding: 60px 20px; }
 .next-steps-inner { max-width: 1100px; margin: 0 auto; }
 .next-steps-headline {
   font-family: 'Poppins', sans-serif; font-weight: 700;
@@ -132,22 +140,23 @@ header {
   border-top: 4px solid #2FAFB2;
 }
 .step-number {
-  width: 48px; height: 48px;
+  width: 40px; height: 40px;
   background: #2FAFB2; color: #fff;
   border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
   font-family: 'Poppins', sans-serif; font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 18px;
 }
 .step-title {
   font-family: 'Poppins', sans-serif; font-weight: 600;
   font-size: 17px; color: #1A1A1A; margin-bottom: 10px;
 }
-.step-body { font-size: 14px; color: #666; line-height: 1.7; }
-@media (max-width: 800px) {
-  .steps-grid { grid-template-columns: 1fr; }
+.step-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; color: #666; line-height: 1.7;
 }
+@media (max-width: 800px) { .steps-grid { grid-template-columns: 1fr; } }
 
 .calendar-cta-wrap { text-align: center; margin-top: 32px; }
 .calendar-btn {
@@ -160,28 +169,38 @@ header {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 .calendar-btn:hover { transform: scale(1.02); filter: brightness(1.05); }
-
 .cta-link-wrap { text-align: center; margin-top: 16px; }
-.cta-link-wrap a { font-size: 13px; color: #2FAFB2; font-weight: 600; }
+.cta-link-wrap a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: #2FAFB2; font-weight: 600;
+}
 .cta-link-wrap a:hover { text-decoration: underline; }
 
 /* FOOTER */
 footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 .footer-grid {
   max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
 }
 .footer-tagline {
-  font-size: 14px; color: rgba(255,255,255,0.7);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; color: rgba(255,255,255,0.7);
   margin: 12px 0;
 }
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 16px; }
+.footer-copy {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px; color: rgba(255,255,255,0.5);
+  margin-top: 12px;
+}
 .footer-contact-title {
   font-family: 'Poppins', sans-serif; font-weight: 600;
   font-size: 14px; color: #fff; margin-bottom: 12px;
 }
-.footer-contact-list { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.9; }
+.footer-contact-list {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.9;
+}
+.footer-contact-list a { color: #fff; }
 .footer-contact-list a:hover { color: #ECA340; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -189,9 +208,7 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   font-size: 12px; color: rgba(255,255,255,0.5);
   margin-top: 36px;
 }
-@media (max-width: 700px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-}
+@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
 
 @keyframes pop {
   0% { transform: scale(0); opacity: 0; }
@@ -215,7 +232,7 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   </a>
 </header>
 
-<!-- SUCCESS HERO -->
+<!-- HERO -->
 <section class="success-hero">
   <div class="success-icon" aria-hidden="true">✓</div>
   <h1 class="success-headline">¡Tu cupo está confirmado!</h1>
@@ -231,22 +248,22 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
       <div class="step-card">
         <div class="step-number">1</div>
         <div class="step-title">Revisa tu WhatsApp</div>
-        <p class="step-body">Te enviaremos la confirmación de tu cita y el recordatorio 24 horas antes. Guarda el número de Orión en tus contactos.</p>
+        <p class="step-body">Te enviamos confirmación y recordatorio 24h antes. Guarda el número de Orión en tus contactos.</p>
       </div>
       <div class="step-card">
         <div class="step-number">2</div>
         <div class="step-title">Prepara tu radiografía</div>
-        <p class="step-body">Si no tienes una, te enviamos la orden por WhatsApp. Puedes tomarla sin cita en nuestro centro aliado por $27,000 COP.</p>
+        <p class="step-body">Si no tienes una, te enviamos la orden. $27,000 COP en nuestro centro aliado.</p>
       </div>
       <div class="step-card">
         <div class="step-number">3</div>
         <div class="step-title">Llega 5 minutos antes</div>
-        <p class="step-body">El día de tu cita llega un poco antes. Tu regalo de bienvenida te estará esperando desde el primer momento.</p>
+        <p class="step-body">Tu regalo de bienvenida te estará esperando desde el primer momento.</p>
       </div>
     </div>
 
     <div class="calendar-cta-wrap">
-      <a id="calendar-btn" href="#" target="_blank" rel="noopener" class="calendar-btn">📅 Agregar a mi Calendario</a>
+      <a id="cal-btn" href="#" target="_blank" rel="noopener" class="calendar-btn">📅 Agregar a mi Calendario</a>
     </div>
     <div class="cta-link-wrap">
       <a href="/index.html">← Volver al inicio</a>
@@ -277,37 +294,26 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 </footer>
 
 <script>
-// ADD TO CALENDAR — defaults to 3 days out, 10:00 AM Bogotá time, 1 hour duration.
+// ADD TO CALENDAR — defaults to 3 days out
 (function buildCalendarUrl() {
-  const start = new Date();
-  start.setDate(start.getDate() + 3);
-  start.setHours(15, 0, 0, 0); // 10:00 AM Bogotá (UTC-5) = 15:00 UTC
-  const end = new Date(start.getTime() + 60 * 60 * 1000);
-
-  const fmt = d => d.toISOString().replace(/[-:]|\.\d{3}/g, '');
-  const dateStr = fmt(start) + '/' + fmt(end);
-
-  const params = new URLSearchParams({
-    action: 'TEMPLATE',
-    text: 'Consulta Orión Odontología',
-    dates: dateStr,
-    details: 'Primera Consulta de Diagnóstico Completo. Radiografía + Evaluación + Reporte + Regalo de bienvenida.',
-    location: 'Calle 23 Norte N° 15-35 Local 7, Edificio Oasis de Laureles, Armenia, Quindío'
-  });
-
-  const calUrl = 'https://calendar.google.com/calendar/render?' + params.toString();
-  const btn = document.getElementById('calendar-btn');
-  if (btn) btn.href = calUrl;
+  const d = new Date();
+  d.setDate(d.getDate() + 3);
+  d.setHours(15, 0, 0, 0); // 10 AM Bogotá (UTC-5)
+  const ds = d.toISOString().replace(/-|:|\.\d\d\d/g,'');
+  const url = 'https://calendar.google.com/calendar/render'
+    + '?action=TEMPLATE'
+    + '&text=Consulta+Orión+Odontología'
+    + '&dates=' + ds + '/' + ds
+    + '&details=Primera+Consulta+$40,000+COP'
+    + '&location=Calle+23+Norte+15-35+Local+7,+Armenia,+Quindío';
+  const btn = document.getElementById('cal-btn');
+  if (btn) btn.href = url;
 })();
 
-// HEADER SHADOW ON SCROLL
+// HEADER SHADOW
 window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (header) {
-    header.style.boxShadow = window.scrollY > 10
-      ? '0 2px 12px rgba(0,0,0,0.15)'
-      : 'none';
-  }
+  const h = document.querySelector('header');
+  if (h) h.style.boxShadow = window.scrollY > 10 ? '0 2px 12px rgba(0,0,0,0.15)' : 'none';
 });
 </script>
 
