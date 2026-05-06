@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Primera Consulta Dental $40,000 COP | Orión Odontología Armenia</title>
-<meta name="description" content="Evaluación dental completa con radiografía panorámica, reporte personalizado y regalo de bienvenida. Solo $40,000 COP. Cupos limitados. Armenia, Quindío, Colombia.">
-<meta property="og:title" content="Primera Consulta Dental — $40,000 COP">
+<title>Primera Consulta Dental $40.000 | Orión Odontología Armenia</title>
+<meta name="description" content="Evaluación dental completa con radiografía panorámica, reporte personalizado y regalo de bienvenida. Solo $40.000. Cupos limitados. Armenia, Quindío, Colombia.">
+<meta property="og:title" content="Primera Consulta Dental — $40.000">
 <meta property="og:description" content="Radiografía + Evaluación + Reporte + Regalo de bienvenida. Cupos muy limitados. Armenia, Quindío.">
 <meta property="og:url" content="https://evaluacionorion.org">
 <meta property="og:type" content="website">
@@ -1081,6 +1081,117 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 #q1 { display: block; position: relative; }
 #q2b, #q2a { display: none; }
 
+/* ── MOBILE SURVEY COMPRESSION ── */
+@media (max-width: 600px) {
+
+  /* Compress survey header band */
+  #survey-section .section-band {
+    padding: 18px 20px !important;
+  }
+  #survey-section .section-band-emoji {
+    font-size: 24px !important;
+    margin-bottom: 4px !important;
+  }
+  #survey-section .section-band-title {
+    font-size: 18px !important;
+    margin-bottom: 4px !important;
+  }
+  #survey-section .section-band-subtitle {
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+  }
+  #step-dots {
+    margin-top: 10px !important;
+  }
+
+  /* Compress survey container padding */
+  #survey-container {
+    padding: 20px 16px !important;
+  }
+
+  /* Question label smaller */
+  .question-label {
+    font-size: 11px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Question text tighter */
+  .question-text {
+    font-size: 17px !important;
+    margin-bottom: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Options gap tighter */
+  .options-list {
+    gap: 8px !important;
+  }
+
+  /* Option cards smaller */
+  .survey-option {
+    min-height: 54px !important;
+    padding: 12px 14px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Option text smaller */
+  .option-text {
+    font-size: 14px !important;
+  }
+
+  /* Option subtext smaller */
+  .option-subtext {
+    font-size: 12px !important;
+  }
+
+  /* Radio circle slightly smaller */
+  .radio-circle {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .radio-inner {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  /* Checkmark smaller */
+  .option-check {
+    font-size: 15px !important;
+    width: 20px !important;
+  }
+}
+
+/* ── INLINE STEP DOTS WITH LABEL ── */
+@media (max-width: 600px) {
+  .question-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 10px !important;
+  }
+  .question-label {
+    margin-bottom: 0 !important;
+  }
+  #step-dots {
+    margin-top: 0 !important;
+    gap: 6px !important;
+  }
+  .step-dot {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+/* ── HERO PRICE MOBILE ── */
+@media (max-width: 600px) {
+  .hero-price-main {
+    font-size: 30px !important;
+  }
+  .hero-price-usd {
+    font-size: 14px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1114,8 +1225,11 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
     <div class="hero-sub">y llévate un regalo de bienvenida exclusivo</div>
     <p class="hero-body">Primera Consulta de Diagnóstico Completo para nuevos pacientes en Armenia, Quindío. Radiografía + evaluación con especialista + reporte escrito personalizado.</p>
 
-    <div class="hero-price">$40,000 COP</div>
-    <div class="hero-price-sub">Todo incluido. Sin costos ocultos.</div>
+    <div style="text-align:center;line-height:1.3;">
+      <span class="hero-price-main" style="font-family:'Poppins',sans-serif;font-weight:700;font-size:32px;color:#ECA340;display:block;">$40.000</span>
+      <span class="hero-price-usd" style="font-family:'Open Sans',sans-serif;font-weight:400;font-size:15px;color:rgba(255,255,255,0.65);display:block;margin-top:4px;">/ $17 USD</span>
+      <span style="font-family:'Open Sans',sans-serif;font-weight:400;font-size:13px;color:rgba(255,255,255,0.6);display:block;margin-top:2px;">Todo incluido. Sin costos ocultos.</span>
+    </div>
 
     <div class="countdown">
       <span class="countdown-dot" aria-hidden="true"></span>
@@ -1148,7 +1262,9 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 
     <!-- Q1 INTENT -->
     <div id="q1">
-      <span class="question-label" id="q1-label">PREGUNTA 1 DE 3</span>
+      <div class="question-header">
+        <span class="question-label" id="q1-label">PREGUNTA 1 DE 3</span>
+      </div>
       <h3 class="question-text">¿Qué es lo que más deseas mejorar en tu sonrisa?</h3>
       <div class="options-list">
         <div class="survey-option" onclick="selectIntent(this,'implantes','Implantes Dentales')">
@@ -1181,7 +1297,9 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 
     <!-- Q2B CONCERN (revision only) -->
     <div id="q2b">
-      <span class="question-label">PREGUNTA 2 DE 4</span>
+      <div class="question-header">
+        <span class="question-label">PREGUNTA 2 DE 4</span>
+      </div>
       <h3 class="question-text">¿Hay algo específico que te preocupa de tu salud dental?</h3>
       <div class="options-list">
         <div class="survey-option" onclick="selectConcern(this,'dolor','Tengo dolor o molestia','URGENT')">
@@ -1214,7 +1332,9 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 
     <!-- Q2A TIMELINE -->
     <div id="q2a">
-      <span class="question-label" id="q2a-label">PREGUNTA 2 DE 3</span>
+      <div class="question-header">
+        <span class="question-label" id="q2a-label">PREGUNTA 2 DE 3</span>
+      </div>
       <h3 class="question-text">¿Cuándo te gustaría comenzar tu tratamiento?</h3>
       <div class="options-list">
         <div class="survey-option" onclick="selectTimeline(this,'lo_antes_posible','Lo antes posible','HOT')">
@@ -1319,7 +1439,7 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
     <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:20px;">
       <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ Confirmación por WhatsApp</span>
       <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ Recordatorio 24h antes</span>
-      <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ $40,000 COP todo incluido</span>
+      <span style="font-family:'Open Sans',sans-serif;font-size:13px;color:#2FAFB2;">✓ $40.000 todo incluido</span>
     </div>
   </div>
 </section>
@@ -1330,31 +1450,34 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 <section class="section value-section">
   <div class="section-label">LO QUE INCLUYE TU CONSULTA</div>
   <div class="section-divider-line"></div>
-  <h2 class="section-headline">Todo esto por solo $40,000 COP</h2>
+  <h2 class="section-headline">Todo esto por solo $40.000</h2>
   <div class="offer-card">
     <div class="offer-item">
       <div class="offer-item-name"><span class="offer-check">✓</span> Radiografía panorámica digital</div>
-      <div class="offer-strike">$27,000 COP</div>
+      <div class="offer-strike">$27.000</div>
     </div>
     <div class="offer-item">
       <div class="offer-item-name"><span class="offer-check">✓</span> Evaluación completa con especialista</div>
-      <div class="offer-strike">$120,000 COP</div>
+      <div class="offer-strike">$120.000</div>
     </div>
     <div class="offer-item">
       <div class="offer-item-name"><span class="offer-check">✓</span> Reporte escrito de recomendaciones</div>
-      <div class="offer-strike">$50,000 COP</div>
+      <div class="offer-strike">$50.000</div>
     </div>
     <div class="offer-item">
       <div class="offer-item-name"><span class="offer-check">✓</span> Regalo de bienvenida exclusivo</div>
-      <div class="offer-strike">$50,000 COP</div>
+      <div class="offer-strike">$50.000</div>
     </div>
     <div class="offer-total-row">
       <div class="offer-total-label">Valor total:</div>
-      <div class="offer-total-value">$247,000 COP</div>
+      <div class="offer-total-value">$247.000</div>
     </div>
     <div class="offer-highlight">
       <div class="offer-highlight-label">Tu inversión hoy:</div>
-      <div class="offer-highlight-value">$40,000 COP</div>
+      <div style="text-align:right;line-height:1.3;">
+        <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:#1A1A1A;display:block;">$40.000</span>
+        <span style="font-family:'Open Sans',sans-serif;font-weight:400;font-size:13px;color:rgba(26,26,26,0.6);display:block;margin-top:2px;">/ $17 USD</span>
+      </div>
     </div>
   </div>
   <p class="offer-foot">Solo para nuevos pacientes. Cupos muy limitados por semana.</p>
@@ -1502,7 +1625,7 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
         <span>¿Qué pasa si no tengo la radiografía?</span>
         <span class="faq-chevron">▾</span>
       </div>
-      <div class="faq-answer">Al confirmar tu cita te enviamos por WhatsApp la orden para tomarla en nuestro centro radiológico aliado. Valor: $27,000 COP. Sin cita previa. 4 sedes en Armenia y Quimbaya.</div>
+      <div class="faq-answer">Al confirmar tu cita te enviamos por WhatsApp la orden para tomarla en nuestro centro radiológico aliado. Valor: $27.000. Sin cita previa. 4 sedes en Armenia y Quimbaya.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">
@@ -1528,7 +1651,7 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
   <div class="final-urgency">⚠ Últimos cupos disponibles esta semana</div>
   <h2 class="final-headline">Tu sonrisa merece atención<br>de primer nivel.</h2>
   <p class="final-sub">Reserva tu Primera Consulta de Diagnóstico Completo y llévate tu regalo de bienvenida.</p>
-  <div class="final-price">$40,000 COP — Radiografía + Evaluación + Reporte + Regalo</div>
+  <div class="final-price"><span style="font-family:'Poppins',sans-serif;font-weight:600;">$40.000</span> <span style="font-family:'Open Sans',sans-serif;font-weight:400;opacity:0.7;">/ $17 USD</span> — Radiografía + Evaluación + Reporte + Regalo</div>
   <a href="#survey-section" class="cta-final" onclick="document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});">RESERVAR MI CUPO AHORA →</a>
   <div class="final-trust">
     <span>🔒 Pago seguro el día de tu cita</span>
