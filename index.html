@@ -106,27 +106,50 @@ header {
   width: 100%; max-width: 720px; margin: 0 auto;
   display: flex; flex-direction: column; align-items: center;
 }
-.hero-media {
-  width: 100%; max-width: 560px;
-  margin-bottom: 18px;
-}
-.hero-media video,
-.hero-media .media-placeholder {
+.hero-video-frame {
+  position: relative;
   width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  max-width: 540px;
+  margin: 0 auto 22px;
+  padding: 5px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ECA340 0%, #2FAFB2 50%, #A3C854 100%);
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.15),
+    0 0 80px rgba(47,175,178,0.25);
+  isolation: isolate;
 }
-.media-placeholder {
-  aspect-ratio: 16/10;
-  background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
-  border: 2px dashed rgba(255,255,255,0.4);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; padding: 24px;
-  color: #fff;
+.hero-video-frame::before {
+  content: "";
+  position: absolute; inset: 5px;
+  border-radius: 17px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+  z-index: 1;
 }
-.media-placeholder .ph-icon { font-size: 40px; margin-bottom: 12px; }
-.media-placeholder .ph-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 15px; margin-bottom: 6px; }
-.media-placeholder .ph-file { font-size: 11px; opacity: 0.85; font-family: monospace; }
+.hero-video {
+  display: block;
+  width: 100%;
+  border-radius: 17px;
+  background: #000;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .hero-video-frame {
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    box-shadow:
+      0 16px 40px rgba(0,0,0,0.3),
+      0 0 0 1px rgba(255,255,255,0.1),
+      0 0 50px rgba(47,175,178,0.2);
+  }
+  .hero-video-frame::before { inset: 4px; border-radius: 14px; }
+  .hero-video { border-radius: 14px; }
+}
 .media-caption {
   font-family: 'Open Sans', sans-serif;
   font-style: italic; color: rgba(255,255,255,0.7);
@@ -679,15 +702,14 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-media">
-      <video autoplay muted loop playsinline
+    <div class="hero-video-frame">
+      <video autoplay muted loop playsinline preload="metadata"
         poster="assets/orion-clinic.jpg"
-        style="width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.25);display:block;">
-        <source src="assets/dr-jovan-video.mp4" type="video/mp4">
-        <img src="assets/orion-clinic.jpg" alt="Orión Odontología Armenia" style="width:100%;border-radius:16px;">
+        class="hero-video">
+        <source src="assets/lv_0_20260507181919.mp4" type="video/mp4">
+        <img src="assets/orion-clinic.jpg" alt="Orión Odontología Armenia" style="width:100%;display:block;border-radius:14px;">
       </video>
     </div>
-    <div class="media-caption">Video del Dr. Jovan — próximamente</div>
 
     <a href="https://wa.me/573228719150?text=Hola%2C%20me%20interesa%20la%20Primera%20Consulta%20de%20Diagn%C3%B3stico%20en%20Orion%20Odontolog%C3%ADa%20por%20%2440.000.%20Me%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="scarcity-badge">⚠ Solo 10 cupos disponibles esta semana</a>
 
