@@ -298,10 +298,7 @@ header {
   letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 14px;
 }
-.section-divider-line {
-  width: 40px; height: 3px; background: #2FAFB2;
-  margin: 0 auto 24px; border-radius: 2px;
-}
+.section-divider-line { display: none; }
 .section-headline {
   font-family: 'Poppins', sans-serif; font-weight: 700;
   font-size: 34px; color: #1A1A1A;
@@ -1232,7 +1229,10 @@ a[href*="wa.me"] { font-size: 17px !important; }
 .footer-contact-item { font-size: 14px !important; line-height: 1.85 !important; }
 
 /* Section label */
-.section-label { font-size: 11px !important; letter-spacing: 2.5px !important; }
+.section-label { font-size: 18px !important; font-weight: 800 !important; letter-spacing: 2px !important; }
+@media (max-width: 480px) {
+  .section-label { font-size: 16px !important; letter-spacing: 1.5px !important; }
+}
 
 /* Review name + tag */
 .review-name { font-size: 14px !important; font-weight: 600 !important; }
