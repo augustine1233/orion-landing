@@ -796,6 +796,35 @@ body {
 }
 @media (max-width: 480px) { .body-text { font-size: 15px; line-height: 1.7; } }
 
+/* Copy section (e.g. 10 años trust block) */
+.copy { padding: 96px 20px; }
+.copy.on-white { background: #FFFFFF; color: #1A1A1A; }
+.copy .container { max-width: 720px; margin: 0 auto; text-align: center; }
+.copy h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+.copy p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+.copy p:last-child { margin-bottom: 0; }
+.copy .highlight { color: #2FAFB2; }
+@media (max-width: 768px) {
+  .copy { padding: 72px 20px; }
+  .copy h2 { font-size: 28px; }
+}
+@media (max-width: 480px) {
+  .copy { padding: 56px 16px; }
+  .copy h2 { font-size: 24px; }
+  .copy p { font-size: 15px; line-height: 1.7; }
+}
+
 /* Value stack item names + struck prices */
 .value-item-name {
   font-family: 'Poppins', sans-serif;
@@ -1350,6 +1379,30 @@ input, select, textarea { font-size: 16px !important; }
     </div>
   </div>
   <p class="offer-foot">Solo para nuevos pacientes. Cupos muy limitados por semana.</p>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TRUST COPY -->
+<section class="copy on-white">
+  <div class="container">
+    <h2>10 años cuidando las sonrisas de <span class="highlight">Armenia y el Quindío</span></h2>
+
+    <p>
+      El Dr. Jovan no es un dentista común. Es <strong>odontólogo integrativo</strong>,
+      lo que significa que mira tu boca como parte de tu salud completa,
+      no como piezas sueltas.
+    </p>
+
+    <p>
+      <strong>Más de 500 pacientes</strong> ya confiaron en nosotros.
+      Tenemos <strong>calificación de 5 estrellas verificadas en Google</strong>.
+    </p>
+
+    <p>
+      Y ahora te toca a ti descubrir lo que es una consulta dental hecha bien.
+    </p>
+  </div>
 </section>
 
 <div class="section-divider"></div>
