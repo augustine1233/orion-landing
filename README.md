@@ -1,4 +1,4 @@
-# Orion Landing Page — evaluacionorion.org
+# Orion Landing Page — consulta-orion.org
 
 High-converting dental campaign landing page for **Orión Odontología Integrativa IPS** (Armenia, Quindío, Colombia). Mobile-first, Typeform-style sliding survey, Colombian Spanish.
 
@@ -11,7 +11,7 @@ High-converting dental campaign landing page for **Orión Odontología Integrati
 
 ## Connect Domain on Namecheap
 
-1. Vercel → **Settings → Domains** → add `evaluacionorion.org`
+1. Vercel → **Settings → Domains** → add `consulta-orion.org`
 2. Copy A record + CNAME from Vercel
 3. Namecheap → **Advanced DNS** → paste both
 4. Wait 10–30 mins — SSL auto-issues
