@@ -137,10 +137,10 @@ header {
   object-fit: contain;
 }
 
-/* Audio toggle button overlaid on the video */
+/* Audio toggle button overlaid on the video (top-right so it doesn't collide with native controls bar) */
 #audio-toggle {
   position: absolute;
-  bottom: 16px;
+  top: 16px;
   right: 16px;
   z-index: 2;
   display: inline-flex;
@@ -185,7 +185,7 @@ header {
   .hero-video-frame::before { inset: 4px; border-radius: 14px; }
   .hero-video { border-radius: 14px; }
   #audio-toggle {
-    bottom: 12px; right: 12px;
+    top: 12px; right: 12px;
     padding: 8px 12px; font-size: 12px;
     gap: 6px;
   }
@@ -743,9 +743,10 @@ footer { background: #1A1A1A; color: #fff; padding: 48px 20px 0; }
 <section class="hero">
   <div class="hero-content">
     <div class="hero-video-frame">
-      <video autoplay muted loop playsinline preload="metadata"
+      <video autoplay muted loop playsinline controls preload="metadata"
         poster="assets/orion-clinic.jpg"
-        class="hero-video">
+        class="hero-video"
+        controlsList="nodownload">
         <source src="https://6sj8keynvkdys2vx.public.blob.vercel-storage.com/lv_0_20260507181919.mp4" type="video/mp4">
         <img src="assets/orion-clinic.jpg" alt="Orión Odontología Armenia" style="width:100%;display:block;border-radius:14px;">
       </video>
