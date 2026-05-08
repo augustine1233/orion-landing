@@ -1020,6 +1020,225 @@ header { height: 64px; padding: 0 24px; }
   line-height: 1.6;
 }
 
+/* ═══════════════════════════════════════════
+   FIX 1 — REDUCE WHITESPACE
+═══════════════════════════════════════════ */
+
+/* Section padding — reduced */
+.section-padding { padding: 60px 20px !important; }
+@media (max-width: 768px) {
+  .section-padding { padding: 48px 16px !important; }
+}
+@media (max-width: 480px) {
+  .section-padding { padding: 40px 16px !important; }
+}
+
+/* Tighter section headline / subheadline rhythm */
+.section-headline { margin-bottom: 12px !important; }
+.section-subheadline { margin-bottom: 32px !important; }
+
+/* Reduce hero padding */
+.hero-content { padding: 40px 20px 56px !important; }
+@media (max-width: 480px) {
+  .hero-content { padding: 28px 16px 44px !important; }
+}
+
+/* Reduce hero element gaps */
+.hero-price-block { margin: 16px auto !important; }
+.hero-cta { margin: 20px auto 14px !important; }
+
+/* Tighten value stack card */
+.value-stack-card { padding: 32px 28px !important; border-radius: 20px !important; }
+@media (max-width: 480px) {
+  .value-stack-card { padding: 24px 18px !important; }
+}
+
+/* Tighten testimonial card */
+.testimonial-card { padding: 32px 36px !important; }
+@media (max-width: 480px) {
+  .testimonial-card { padding: 24px 18px !important; }
+}
+
+/* Tighten review cards */
+.review-card { padding: 22px !important; }
+
+/* Tighten pain cards */
+.pain-card { padding: 22px 20px !important; }
+
+/* Tighten FAQ items */
+.faq-item { padding: 18px 0 !important; }
+
+/* Trust bar tighter */
+.trust-bar { padding: 40px 20px !important; }
+
+/* Reduce gap between section label and headline */
+.section-label { margin-bottom: 8px !important; }
+
+/* Reduce section band padding */
+.section-band { padding: 24px 20px !important; }
+
+/* Reduce paragraph spacing */
+p + p { margin-top: 12px !important; }
+
+/* Body text margin */
+.body-text { margin-bottom: 16px !important; }
+
+/* Card grid gap */
+.card-grid-gap { gap: 16px !important; }
+
+/* About + final CTA padding */
+#about-section,
+section[id*="about"] { padding: 60px 20px !important; }
+#final-cta,
+section[id*="cta"] { padding: 60px 20px !important; }
+
+/* Remove margin between dividers and following blocks */
+.section-divider + section,
+.section-divider + div { margin-top: 0 !important; }
+
+/* ═══════════════════════════════════════════
+   FIX 2 — INCREASE FONT SIZES
+═══════════════════════════════════════════ */
+
+/* Hero headline */
+.hero-headline { font-size: 52px !important; line-height: 1.12 !important; }
+@media (max-width: 768px) {
+  .hero-headline { font-size: 38px !important; }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px !important; }
+}
+
+/* Hero sub-headline */
+.hero-subheadline { font-size: 21px !important; line-height: 1.45 !important; }
+@media (max-width: 480px) {
+  .hero-subheadline { font-size: 17px !important; }
+}
+
+/* Hero body */
+.hero-body { font-size: 16px !important; line-height: 1.7 !important; }
+
+/* Section headlines */
+.section-headline { font-size: 36px !important; line-height: 1.22 !important; }
+@media (max-width: 768px) {
+  .section-headline { font-size: 28px !important; }
+}
+@media (max-width: 480px) {
+  .section-headline { font-size: 24px !important; }
+}
+
+/* Section sub-headlines */
+.section-subheadline { font-size: 17px !important; line-height: 1.65 !important; }
+@media (max-width: 480px) {
+  .section-subheadline { font-size: 15px !important; }
+}
+
+/* Body text globally */
+body { font-size: 16px !important; line-height: 1.7 !important; }
+
+/* All paragraph text */
+p { font-size: 16px !important; line-height: 1.72 !important; }
+
+/* Value stack item names + struck prices */
+.value-item-name { font-size: 16px !important; line-height: 1.45 !important; }
+.value-item-price { font-size: 15px !important; }
+
+/* Value stack highlight row */
+.value-stack-card .highlight-row span,
+.value-stack-card [style*="ECA340"] span,
+.value-stack-card [style*="eca340"] span { font-size: 20px !important; }
+
+/* Testimonial quote */
+.testimonial-quote { font-size: 18px !important; line-height: 1.8 !important; }
+
+/* Review quote */
+.review-quote { font-size: 15px !important; line-height: 1.72 !important; }
+
+/* FAQ question */
+.faq-question-text,
+.faq-question { font-size: 17px !important; line-height: 1.45 !important; }
+@media (max-width: 480px) {
+  .faq-question-text,
+  .faq-question { font-size: 15px !important; }
+}
+
+/* FAQ answer */
+.faq-answer,
+.faq-answer-text { font-size: 16px !important; line-height: 1.72 !important; }
+
+/* About body */
+.about-body { font-size: 16px !important; line-height: 1.8 !important; }
+
+/* Trust stat */
+.trust-stat-value { font-size: 30px !important; }
+.trust-stat-label { font-size: 13px !important; }
+
+/* Pain card */
+.pain-card-title { font-size: 16px !important; }
+.pain-card-body { font-size: 15px !important; line-height: 1.65 !important; }
+
+/* Section band */
+.section-band-title { font-size: 24px !important; }
+@media (max-width: 480px) {
+  .section-band-title { font-size: 19px !important; }
+}
+.section-band-subtitle { font-size: 15px !important; line-height: 1.55 !important; }
+
+/* Final CTA headline */
+.cta-headline { font-size: 42px !important; line-height: 1.15 !important; }
+@media (max-width: 768px) {
+  .cta-headline { font-size: 30px !important; }
+}
+@media (max-width: 480px) {
+  .cta-headline { font-size: 26px !important; }
+}
+
+/* CTA subheadline + price */
+.cta-subheadline { font-size: 17px !important; line-height: 1.65 !important; }
+.cta-price { font-size: 19px !important; }
+
+/* WhatsApp button */
+.whatsapp-btn-text,
+a[href*="wa.me"] { font-size: 17px !important; }
+
+/* Footer */
+.footer-logo-text { font-size: 19px !important; }
+.footer-tagline { font-size: 14px !important; }
+.footer-contact-item { font-size: 14px !important; line-height: 1.85 !important; }
+
+/* Section label */
+.section-label { font-size: 11px !important; letter-spacing: 2.5px !important; }
+
+/* Review name + tag */
+.review-name { font-size: 14px !important; font-weight: 600 !important; }
+.review-tag { font-size: 12px !important; }
+
+/* Google rating number */
+.google-rating-number { font-size: 36px !important; }
+
+/* Inputs — 16px prevents iOS zoom */
+input, select, textarea { font-size: 16px !important; }
+
+/* Survey option (kept for legacy refs) */
+.option-text { font-size: 16px !important; }
+.option-subtext { font-size: 14px !important; }
+
+/* Question text in survey (legacy) */
+.question-text { font-size: 20px !important; line-height: 1.35 !important; }
+@media (max-width: 480px) {
+  .question-text { font-size: 17px !important; }
+}
+
+/* Hero price */
+.hero-price-main { font-size: 38px !important; }
+@media (max-width: 480px) {
+  .hero-price-main { font-size: 32px !important; }
+}
+.hero-price-usd { font-size: 16px !important; }
+
+/* Trust microcopy */
+.trust-microcopy { font-size: 13px !important; line-height: 1.9 !important; }
+
 </style>
 
 <!-- Vercel Web Analytics (static-site script form) -->
