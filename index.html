@@ -1267,6 +1267,343 @@ input, select, textarea { font-size: 16px !important; }
   .trust-microcopy { font-size: 16px !important; }
 }
 
+/* ═══════════════════════════════════════════
+   BRAND-ALIGNED REFRESH (mobile-first)
+═══════════════════════════════════════════ */
+
+/* Page surface: white-ish, not teal */
+body { background: #f7f8f8 !important; }
+
+/* Hero — light surface with brand accents instead of full teal */
+.hero {
+  background: #f7f8f8 !important;
+  min-height: auto !important;
+  padding: 24px 20px 40px !important;
+}
+.hero::before {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(90deg, #ECA340 0%, #2FAFB2 50%, #A3C854 100%);
+  position: absolute; top: 0; left: 0;
+}
+.hero { position: relative; }
+.hero-headline { color: #1A1A1A !important; }
+.hero-sub, .hero-subheadline {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600 !important;
+  color: #444444 !important;
+}
+.hero-body {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  color: #1A1A1A !important;
+  font-size: 17px !important;
+}
+.hero-body-bold { font-weight: 700 !important; color: #1A1A1A !important; margin-top: -8px; }
+.hero-sub strong, .hero-subheadline strong, .hero-body strong { color: #1A1A1A !important; font-weight: 800 !important; }
+.hero-trust { color: #1A1A1A !important; }
+
+/* Video label */
+.video-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1A1A1A;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 16px;
+  line-height: 1.4;
+}
+@media (max-width: 480px) { .video-label { font-size: 15px; text-align: left; } }
+
+/* Countdown stays usable on light hero */
+.countdown {
+  background: #1A1A1A !important;
+  border-color: rgba(255,255,255,0.15) !important;
+}
+
+/* Social proof line above CTA */
+.social-proof {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #2FAFB2;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 8px auto 14px;
+  max-width: 520px;
+}
+.social-proof .stars-gold { color: #ECA340; letter-spacing: 1.5px; }
+
+/* Gift short line under hero CTA */
+.gift-short {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1A1A1A;
+  text-align: center;
+  max-width: 520px;
+  margin: 14px auto 6px;
+  line-height: 1.5;
+}
+
+/* Verde Lima checkmarks */
+.check-lima {
+  color: #A3C854;
+  font-weight: 800;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Standardized orange CTA */
+.cta-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ECA340;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  padding: 18px 32px;
+  border-radius: 14px;
+  text-decoration: none;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 6px 24px rgba(236,163,64,0.35);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  box-sizing: border-box;
+}
+.cta-orange:hover { transform: scale(1.02); filter: brightness(1.06); }
+.cta-orange-final { max-width: 460px; }
+
+/* Dr. Jovan intro strip — sits between hero and value stack */
+.dr-intro {
+  background: #f7f8f8;
+  padding: 8px 16px 24px;
+}
+.dr-intro-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.dr-intro-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+}
+.dr-intro-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #1A1A1A;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+.dr-intro-caption {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #444444;
+  margin: 0;
+  line-height: 1.5;
+}
+@media (max-width: 480px) {
+  .dr-intro-photo { width: 64px; height: 64px; }
+  .dr-intro-name { font-size: 15px; }
+  .dr-intro-caption { font-size: 13px; }
+}
+
+/* Gift reveal in offer stack */
+.gift-reveal { align-items: flex-start !important; padding: 18px 0 !important; }
+.gift-reveal-name { align-items: flex-start !important; flex: 1; }
+.gift-reveal-name > div { display: flex; flex-direction: column; gap: 4px; }
+.gift-reveal-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1A1A1A;
+  line-height: 1.4;
+}
+.gift-reveal-body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.5;
+}
+.gift-reveal-photo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #f7f8f8;
+  display: flex; align-items: center; justify-content: center;
+  margin-left: 12px;
+}
+.gift-reveal-photo-ph { font-size: 32px; opacity: 0.6; }
+
+/* White-card section treatment on f7f8f8 */
+.value-section,
+.reviews-section,
+.faq-section { background: #f7f8f8 !important; padding: 56px 16px !important; }
+.value-section .offer-card,
+.faq-section .faq-list,
+.reviews-section .reviews-grid {
+  /* offer-card already has card styling — leave it */
+}
+.faq-section .faq-list {
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 8px 24px;
+}
+@media (max-width: 480px) {
+  .faq-section .faq-list { padding: 4px 16px; }
+}
+
+/* About — white card on f7f8f8 */
+.about-section {
+  background: #f7f8f8 !important;
+  color: #1A1A1A !important;
+  padding: 56px 16px !important;
+}
+.about-section .about-grid {
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px;
+  max-width: 1000px;
+}
+@media (max-width: 480px) { .about-section .about-grid { padding: 24px 18px; } }
+.about-label { color: #2FAFB2 !important; }
+.about-headline { color: #1A1A1A !important; }
+.about-body { color: #444444 !important; }
+.value-pill { background: #2FAFB2 !important; color: #FFFFFF !important; }
+.friendly-biz { color: #444444 !important; }
+
+/* Reviews already use card-per-review — keep, but bg is f7f8f8 now */
+
+/* Section min spacing 48px */
+.section, .section-padding { min-height: auto; }
+
+/* Body min 17px on mobile */
+@media (max-width: 768px) {
+  body { font-size: 17px !important; line-height: 1.7 !important; }
+  p { font-size: 17px !important; }
+  .hero-body { font-size: 17px !important; }
+  .hero-subheadline { font-size: 17px !important; }
+  .about-body, .faq-answer, .faq-answer-text { font-size: 17px !important; }
+  .copy p { font-size: 17px !important; }
+}
+
+/* Mobile: left-align long-form copy; headlines stay centered */
+@media (max-width: 768px) {
+  .hero-body,
+  .hero-body-bold,
+  .hero-subheadline,
+  .hero-sub,
+  .about-body,
+  .faq-answer,
+  .faq-answer-text,
+  .copy p,
+  .body-text,
+  .reviews-subtext,
+  .offer-foot,
+  .final-sub,
+  .cta-subheadline,
+  .footer-contact-list,
+  .footer-contact-item,
+  .footer-tagline,
+  .reviews-legal { text-align: left !important; }
+
+  /* Headlines + price + CTAs stay centered */
+  .hero-headline,
+  .section-headline,
+  .copy h2,
+  .about-headline,
+  .final-headline,
+  .cta-headline,
+  .video-label,
+  .social-proof,
+  .gift-short,
+  .section-label { text-align: center !important; }
+
+  /* Center the CTA button itself, not its inner text */
+  .hero-cta, .cta-orange, .cta-orange-final { margin-left: auto; margin-right: auto; }
+}
+
+/* Final CTA — white card on f7f8f8 surface, orange button per brand */
+.final-cta {
+  background: #f7f8f8 !important;
+  padding: 56px 16px !important;
+}
+.final-cta > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+.final-headline, .cta-headline { color: #1A1A1A !important; }
+.final-sub, .cta-subheadline { color: #444444 !important; }
+.cta-orange-final { background: #ECA340 !important; color: #FFFFFF !important; box-shadow: 0 6px 24px rgba(236,163,64,0.35) !important; }
+.final-trust { color: #444444 !important; }
+.final-urgency { background: #DA4237 !important; }
+
+/* Guarantee block */
+.guarantee-section {
+  background: #f7f8f8;
+  padding: 32px 16px 8px;
+}
+.guarantee-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.guarantee-check {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #A3C854;
+  color: #FFFFFF;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+.guarantee-lead {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1A1A1A;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.guarantee-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  color: #444444;
+  margin: 0;
+  line-height: 1.6;
+}
+@media (max-width: 480px) {
+  .guarantee-card { padding: 20px; gap: 12px; }
+  .guarantee-lead { font-size: 17px; }
+}
+
+/* Trust copy section bg should also be the new neutral */
+.copy.on-white { background: #FFFFFF; }
+
 </style>
 
 <!-- Vercel Web Analytics (static-site script form) -->
@@ -1296,6 +1633,7 @@ input, select, textarea { font-size: 16px !important; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
+    <p class="video-label">El Dr. Jovan te explica en menos de 60 segundos qué incluye tu consulta →</p>
     <div class="hero-video-frame">
       <video autoplay muted loop playsinline controls preload="metadata"
         poster="assets/orion-clinic.jpg"
@@ -1317,9 +1655,10 @@ input, select, textarea { font-size: 16px !important; }
 
     <a href="https://wa.me/573228719150?text=Hola%2C%20me%20interesa%20la%20Primera%20Consulta%20de%20Diagn%C3%B3stico%20en%20Orion%20Odontolog%C3%ADa%20por%20%2440.000.%20Me%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="scarcity-badge">⚠ Solo 10 cupos disponibles esta semana</a>
 
-    <h1 class="hero-headline">Descubre el Estado Real<br>de Tu Sonrisa</h1>
-    <div class="hero-sub hero-subheadline">y llévate un <strong>regalo de bienvenida exclusivo</strong></div>
-    <p class="hero-body"><strong>Primera Consulta de Diagnóstico Completo</strong> para nuevos pacientes en Armenia, Quindío. <strong>Radiografía</strong> + <strong>evaluación con especialista</strong> + <strong>reporte escrito personalizado</strong>.</p>
+    <h1 class="hero-headline">¿Llevas tiempo postergando tu cita odontológica?</h1>
+    <p class="hero-sub hero-subheadline">El miedo, el dolor o una mala experiencia anterior no debería costarte tu sonrisa. En Orión lo hacemos diferente.</p>
+    <p class="hero-body">Valoración integral con un equipo interdisciplinar, con ayudas diagnósticas y un resumen completo de tu historia y plan de tratamiento.</p>
+    <p class="hero-body hero-body-bold"><span class="check-lima">✓</span> Todo en una sola visita de aproximadamente una hora.</p>
 
     <div class="hero-price-block" style="text-align:center;line-height:1.3;">
       <span class="hero-price-main" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:44px;color:#ECA340;display:block;">$40.000</span>
@@ -1332,7 +1671,9 @@ input, select, textarea { font-size: 16px !important; }
       <span id="cupos-count">Esta semana quedan 10 cupos — se reinicia el lunes</span>
     </div>
 
-    <a href="https://wa.me/573228719150?text=Hola%2C%20me%20interesa%20la%20Primera%20Consulta%20de%20Diagn%C3%B3stico%20en%20Orion%20Odontolog%C3%ADa%20por%20%2440.000.%20Me%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" onclick="if(typeof fbq!=='undefined')fbq('track','Contact');" class="hero-cta whatsapp-btn-text" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:white;padding:18px 40px;border-radius:14px;text-decoration:none;width:100%;box-shadow:0 6px 24px rgba(37,211,102,0.4);transition:all 0.2s ease;box-sizing:border-box;">
+    <p class="social-proof">Más de 1.800 pacientes locales, nacionales e internacionales confían en Orión <span class="stars-gold">★★★★★</span></p>
+
+    <a href="https://wa.me/573228719150?text=Hola%2C%20me%20interesa%20la%20Primera%20Consulta%20de%20Diagn%C3%B3stico%20en%20Orion%20Odontolog%C3%ADa%20por%20%2440.000.%20Me%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" onclick="if(typeof fbq!=='undefined')fbq('track','Contact');" class="hero-cta whatsapp-btn-text cta-orange">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" style="flex-shrink:0;">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.112 1.529 5.836L.057 23.117a.75.75 0 00.921.903l5.444-1.453A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 01-4.953-1.354l-.355-.212-3.68.983.993-3.596-.232-.371A9.712 9.712 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
@@ -1340,10 +1681,23 @@ input, select, textarea { font-size: 16px !important; }
       AGENDA TU CITA POR WHATSAPP
     </a>
 
+    <p class="gift-short">+ Tu ice pack Orión en forma de muela te espera el día de tu cita 🦷</p>
+
     <div class="hero-trust trust-microcopy">
-      ✓ Respuesta inmediata por WhatsApp<br>
-      ✓ Certificado friendly biz<br>
-      ✓ Sin compromisos adicionales
+      <span class="check-lima">✓</span> Respuesta inmediata por WhatsApp<br>
+      <span class="check-lima">✓</span> Certificado friendly biz<br>
+      <span class="check-lima">✓</span> Sin compromisos adicionales
+    </div>
+  </div>
+</section>
+
+<!-- DR. JOVAN INTRO STRIP -->
+<section class="dr-intro">
+  <div class="dr-intro-inner">
+    <img src="assets/dr-jovan.jpeg" alt="Dr. Jovan Sánchez — odontólogo integrativo en Orión Odontología Armenia" class="dr-intro-photo">
+    <div class="dr-intro-text">
+      <h3 class="dr-intro-name">Dr. Jovan Sánchez — Odontólogo Integrativo</h3>
+      <p class="dr-intro-caption">Más de 10 años transformando sonrisas en Armenia, Quindío.</p>
     </div>
   </div>
 </section>
@@ -1368,9 +1722,18 @@ input, select, textarea { font-size: 16px !important; }
       <div class="offer-item-name value-item-name"><span class="offer-check">✓</span> Reporte escrito de recomendaciones</div>
       <div class="offer-strike value-item-price">$50.000</div>
     </div>
-    <div class="offer-item">
-      <div class="offer-item-name value-item-name"><span class="offer-check">✓</span> Regalo de bienvenida exclusivo</div>
-      <div class="offer-strike value-item-price">$50.000</div>
+    <div class="offer-item gift-reveal">
+      <div class="offer-item-name value-item-name gift-reveal-name">
+        <span class="offer-check">✓</span>
+        <div>
+          <span class="gift-reveal-title">🎁 Tu regalito Orión — un ice pack en forma de muela, con el logo y todo.</span>
+          <span class="gift-reveal-body">Práctico para después de cualquier procedimiento, y tan bonito que lo vas a querer tener en casa.</span>
+        </div>
+      </div>
+      <div class="gift-reveal-photo">
+        <!-- TODO: replace with assets/ice-pack.jpg once provided -->
+        <div class="gift-reveal-photo-ph">🦷</div>
+      </div>
     </div>
     <div class="offer-total-row">
       <div class="offer-total-label">Valor total:</div>
@@ -1401,7 +1764,7 @@ input, select, textarea { font-size: 16px !important; }
     </p>
 
     <p>
-      <strong>Más de 500 pacientes</strong> ya confiaron en nosotros.
+      <strong>Más de 1.800 pacientes locales, nacionales e internacionales</strong> ya confiaron en nosotros.
       Tenemos <strong>calificación de 5 estrellas verificadas en Google</strong>.
     </p>
 
@@ -1544,7 +1907,20 @@ input, select, textarea { font-size: 16px !important; }
         <span class="faq-question-text">¿Dónde están ubicados?</span>
         <span class="faq-chevron">▾</span>
       </div>
-      <div class="faq-answer faq-answer-text">Calle 23 Norte N° 15-35 Local 7, Edificio Oasis de Laureles, Armenia, Quindío. Fácil acceso y parqueadero disponible.</div>
+      <div class="faq-answer faq-answer-text">Estamos junto al Centro Comercial Portal del Quindío, enseguida de la tienda Fitness, frente al Centro Comercial Niteroy, Armenia, Quindío. Estamos más cerca de lo que imaginas.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- GUARANTEE -->
+<section class="guarantee-section">
+  <div class="guarantee-card">
+    <span class="guarantee-check">✓</span>
+    <div class="guarantee-text">
+      <p class="guarantee-lead">Garantizamos tu satisfacción —</p>
+      <p class="guarantee-body">un trato humano, sensible y profesional desde el momento en que entrás por nuestra puerta. Si algo no está bien, nos hacés saber. Así de simple, así de serio.</p>
     </div>
   </div>
 </section>
@@ -1557,7 +1933,7 @@ input, select, textarea { font-size: 16px !important; }
   <h2 class="final-headline cta-headline">Tu sonrisa merece atención<br>de primer nivel.</h2>
   <p class="final-sub cta-subheadline">Reserva tu Primera Consulta de Diagnóstico Completo y llévate tu regalo de bienvenida.</p>
   <div class="final-price cta-price"><span style="font-family:'Poppins',sans-serif;font-weight:600;">$40.000</span> <span style="font-family:'Open Sans',sans-serif;font-weight:400;opacity:0.7;">/ $17 USD</span> — Radiografía + Evaluación + Reporte + Regalo</div>
-  <a href="https://wa.me/573228719150?text=Hola%2C%20me%20interesa%20la%20Primera%20Consulta%20de%20Diagn%C3%B3stico%20en%20Orion%20Odontolog%C3%ADa%20por%20%2440.000.%20Me%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" onclick="if(typeof fbq!=='undefined')fbq('track','Contact');" class="whatsapp-btn-text" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:white;padding:18px 40px;border-radius:14px;text-decoration:none;width:100%;max-width:400px;box-shadow:0 6px 24px rgba(37,211,102,0.4);transition:all 0.2s ease;box-sizing:border-box;">
+  <a href="https://wa.me/573228719150?text=Hola%2C%20me%20interesa%20la%20Primera%20Consulta%20de%20Diagn%C3%B3stico%20en%20Orion%20Odontolog%C3%ADa%20por%20%2440.000.%20Me%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" onclick="if(typeof fbq!=='undefined')fbq('track','Contact');" class="whatsapp-btn-text cta-orange cta-orange-final">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" style="flex-shrink:0;">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.112 1.529 5.836L.057 23.117a.75.75 0 00.921.903l5.444-1.453A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 01-4.953-1.354l-.355-.212-3.68.983.993-3.596-.232-.371A9.712 9.712 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
@@ -1566,8 +1942,8 @@ input, select, textarea { font-size: 16px !important; }
   </a>
   <div class="final-trust">
     <span>🔒 Pago seguro el día de tu cita</span>
-    <span>✓ Sin compromisos adicionales</span>
-    <span>✓ Confirmación inmediata</span>
+    <span><span class="check-lima">✓</span> Sin compromisos adicionales</span>
+    <span><span class="check-lima">✓</span> Confirmación inmediata</span>
   </div>
 </section>
 
@@ -1582,8 +1958,11 @@ input, select, textarea { font-size: 16px !important; }
     <div>
       <div class="footer-contact-title footer-contact-label">Contacto</div>
       <div class="footer-contact-list footer-contact-item">
-        📍 Calle 23 Norte N° 15-35 Local 7,<br>
-        &nbsp;&nbsp;&nbsp;Edificio Oasis de Laureles, Armenia, Quindío<br>
+        📍 Junto al Centro Comercial Portal del Quindío,<br>
+        &nbsp;&nbsp;&nbsp;enseguida de la tienda Fitness,<br>
+        &nbsp;&nbsp;&nbsp;frente al Centro Comercial Niteroy,<br>
+        &nbsp;&nbsp;&nbsp;Armenia, Quindío.<br>
+        &nbsp;&nbsp;&nbsp;Estamos más cerca de lo que imaginas.<br>
         📞 <a href="tel:+573228719150">+57 322 871 9150</a><br>
         📧 <a href="mailto:info@orionodontologia.com">info@orionodontologia.com</a><br>
         🌐 <a href="https://orionodontologia.com" target="_blank" rel="noopener">orionodontologia.com</a>
